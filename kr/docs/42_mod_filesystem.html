@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>File System Module &mdash; Leggiero  문서</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="Graphics Module" href="43_mod_graphics.html" />
+    <link rel="prev" title="Application Module" href="41_mod_application.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Leggiero
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Leggiero</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="00_introduction.html#leggiero">Leggiero</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_dependency.html">Dependency</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#id1">Visual Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#ios">iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#other-dependencies">Other Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#engine-setup">Engine Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#build-and-try-legtoy">Build and try LegToy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#start-with-a-new-project">Start with a NEW project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#notes-for-android-release-build">Notes for Android Release Build</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="18_changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-9-0-current">v0.9.0 (current)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="19_known_issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_concepts_and_architecture.html">Concept and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#a-bird-s-eye-view">A Bird’s-eye View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#technical-decision-background">Technical Decision Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#roadmap">Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#personal-comment">Personal Comment</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="30_platforms.html">Platforms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="30_platforms.html#supported-platforms">Supported Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="30_platforms.html#comparison">Comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="31_platform_iOS.html">iOS Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#supporting-details">Supporting Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#development-environment">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="32_platform_Android.html">Android Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="32_platform_Android.html#supporting-details">Supporting Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="32_platform_Android.html#development-environment">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="32_platform_Android.html#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="33_platform_WinPC.html">Windows PC Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="33_platform_WinPC.html#development-environment">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_platform_WinPC.html#libraries">Libraries</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="40_modules.html">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="40_modules.html#component-and-module-interface">Component and Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40_modules.html#game-creation">Game Creation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="41_mod_application.html">Application Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="41_mod_application.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="41_mod_application.html#application-component">Application Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">File System Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bundle-file-resource-component">Bundle File Resource Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-system-path-component">File System Path Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="43_mod_graphics.html">Graphics Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="43_mod_graphics.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="43_mod_graphics.html#graphics-module-interface">Graphics Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="43_mod_graphics.html#graphic-resource-manager-component">Graphic Resource Manager Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="44_mod_input.html">Input Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="44_mod_input.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="44_mod_input.html#touch-input-component">Touch Input Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="45_mod_sound.html">Sound Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#sound-provider">Sound Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#sound-mixer-component">Sound Mixer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#bgm-player-component">BGM Player Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="46_mod_log.html">Log Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="46_mod_log.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="46_mod_log.html#logger-and-log-writer">Logger and Log Writer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="46_mod_log.html#log-module-interface">Log Module Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="47_mod_task.html">Task Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="47_mod_task.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="47_mod_task.html#task-manager-component">Task Manager Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="48_mod_font.html">Font Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="48_mod_font.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="48_mod_font.html#font-module-interface">Font Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="48_mod_font.html#glyph-manager-component">Glyph Manager Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="49_mod_crypto.html">Cryptography Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="49_mod_crypto.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="49_mod_crypto.html#cryptography-module-interface">Cryptography Module Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="50_mod_http.html">HTTP Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="50_mod_http.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="50_mod_http.html#http-module-interface">HTTP Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="50_mod_http.html#async-http-component">Async HTTP Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="51_mod_legacyui.html">Legacy UI Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#basic-concepts-and-ui-object">Basic Concepts and UI Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#ui-manager">UI Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#ui-scene-base">UI Scene Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#ui-description">UI Description</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="80_tools.html">Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="80_tools.html#project-creator">Project Creator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="91_license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="91_license.html#leggiero">Leggiero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="91_license.html#libraries">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="91_license.html#legtoy">LegToy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="92_library_usage.html">Library Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="92_library_usage.html#leggiero">Leggiero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="92_library_usage.html#legtoy">LegToy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="93_acknowledgement.html">Acknowledgement</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Leggiero</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>File System Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docs/42_mod_filesystem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="file-system-module">
+<h1>File System Module<a class="headerlink" href="#file-system-module" title="제목 주소">¶</a></h1>
+<p>File System 모듈은 플랫폼 파일 시스템 접근에 대한 내용을 추상화하여 제공합니다.</p>
+<div class="section" id="module-common-information">
+<h2>Module Common Information<a class="headerlink" href="#module-common-information" title="제목 주소">¶</a></h2>
+<p><strong>Project:</strong> <em>Modules/FileSystem</em></p>
+<p><strong>Namespace:</strong> <code class="docutils literal notranslate"><span class="pre">Leggiero::FileSystem</span></code></p>
+<div class="section" id="module-interfaces">
+<h3>Module Interfaces<a class="headerlink" href="#module-interfaces" title="제목 주소">¶</a></h3>
+<p>(없음)</p>
+</div>
+<div class="section" id="components">
+<h3>Components<a class="headerlink" href="#components" title="제목 주소">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#bundle-file-resource-component">Bundle File Resource Component</a></p></li>
+<li><p><a class="reference internal" href="#file-system-path-component">File System Path Component</a></p></li>
+</ul>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="제목 주소">¶</a></h3>
+<p><em>FileSystemUtility.h</em> 헤더를 통해, 별도의 초기화 과정이 필요 없는 파일 시스템 관련 유틸리티 API 함수들을 이용하실 수 있습니다.</p>
+</div>
+</div>
+<div class="section" id="bundle-file-resource-component">
+<h2>Bundle File Resource Component<a class="headerlink" href="#bundle-file-resource-component" title="제목 주소">¶</a></h2>
+<p>게임 어플리케이션에 동봉된 번들 리소스에 대한 접근을 추상화하는 컴퍼넌트입니다.</p>
+<p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">Leggiero::FileSystem::BundleFileResourceComponent</span></code></p>
+<p><strong>Component Id:</strong> <code class="docutils literal notranslate"><span class="pre">EngineComponentIdType::kBundleFileResource</span></code> (12)</p>
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="제목 주소">¶</a></h3>
+<p>(없음)</p>
+</div>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="제목 주소">¶</a></h3>
+<p>게임 어플리케이션에 동봉되어 앱 설치 시 함께 저장되는 번들 리소스에 대한 접근을 추상화합니다.</p>
+<p>iOS와 Windows PC 플랫폼의 경우, 번들 리소스는 대상 플랫폼 상의 개별 파일로 존재합니다. 하지만, Android에서는 번들 리소스는 패키징 된 에셋 번들 파일 안에 함께 존재하므로, 번들 리소스를 실제 플랫폼 운영체제 상의 파일로 간주해서는 안 됩니다.</p>
+<p>Leggiero에서는 번들 내의 경로에 해당하는 개별 리소스에 대해, 바이너리로 표현되는 내용을 읽을 수 있는 인터페이스를 제공합니다.
+당연한 이야기지만, 번들 리소스는 앱의 일부이므로, 논리적으로 앱 실행 시에 쓰기 접근을 할 수는 없습니다.</p>
+</div>
+<div class="section" id="non-portable-interface">
+<h3>Non-Portable Interface<a class="headerlink" href="#non-portable-interface" title="제목 주소">¶</a></h3>
+<p>iOS와 Windows PC 플랫폼에서는 각 번들 리소스는 실제 파일의 형태로 존재합니다. 최적화를 위해, portable 하지 않은 이런 가정에 의거한 접근 방식을, <code class="docutils literal notranslate"><span class="pre">Leggiero::FileSystem::NPO::INonPortableOptimization_BundleFileResource</span></code> 인터페이스를 통해 제공합니다.</p>
+<p>유저는 컴퍼넌트에, 해당 최적화 요소가 동작하는지를 질의하여 지원 여부를 확인 후, 리소스에 대한 portable 하지 않은 방식의 접근을 수행할 수 있습니다.</p>
+</div>
+<div class="section" id="bundle-resource-packing">
+<h3>Bundle Resource Packing<a class="headerlink" href="#bundle-resource-packing" title="제목 주소">¶</a></h3>
+<p>각 게임 프로젝트의 디렉터리 내의, <em>Bundle</em> 서브디렉터리 내의 내용이 번들 리소스로 앱에 동봉됩니다.</p>
+<p>Leggiero는 플랫폼별로 최적화된 별도의 번들 리소스를 패키징 할 수 있는 매커니즘을 제공합니다.
+<em>Bundle/Base</em> 디렉터리 내의 리소스는 전 플랫폼의 앱에 공통적으로 패키징됩니다. 이때, <em>Bundle/Base</em> 디렉터리가 번들 된 파일 리소스의 가상 경로의 루트 디렉터리로 간주됩니다.</p>
+<p>한편, <em>Bundle/Platform</em> 디렉터리 내의 각 플랫폼 디렉터리가, 플랫폼별로 서로 다르게 패키징 되는 리소스를 담을 수 있습니다.
+이때, 각 플랫폼 디렉터리(가령 <em>Bundle/Platform/iOS</em> )가 번들 리소스 가상 경로의 루트 디렉터리에 매핑되며, 기본적으로는 Base 리소스 중 같은 가상 경로 상의 리소스를 override 하는 형태로 작동합니다.
+단, Android 플랫폼에서는 리소스 overriding이 불가능하며, 동일 가상 경로 상에 서로 다른 리소스가 존재한다면 앱 빌드 과정에서 에러를 발생시킵니다.</p>
+</div>
+</div>
+<div class="section" id="file-system-path-component">
+<h2>File System Path Component<a class="headerlink" href="#file-system-path-component" title="제목 주소">¶</a></h2>
+<p>게임 어플리케이션에서 이용할 수 있도록 플랫폼에서 제공하는, 파일 시스템 상의 공간을 추상화하는 컴퍼넌트입니다.</p>
+<p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">Leggiero::FileSystem::FileSystemPathComponent</span></code></p>
+<p><strong>Component Id:</strong> <code class="docutils literal notranslate"><span class="pre">EngineComponentIdType::kFileSystemPath</span></code> (11)</p>
+<div class="section" id="id1">
+<h3>Dependencies<a class="headerlink" href="#id1" title="제목 주소">¶</a></h3>
+<p>(없음)</p>
+</div>
+<div class="section" id="id2">
+<h3>Overview<a class="headerlink" href="#id2" title="제목 주소">¶</a></h3>
+<p>플랫폼에서 어플리케이션이 사용할 수 있는 용도로 제공하는 파일 시스템 상의 공간을, 특성과 용도별로 추상화하여 제공합니다.
+아래와 같은 종류의 데이터 디렉터리를 제공합니다:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 30%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Volatility</p></th>
+<th class="head"><p>Cloud Backup</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>MainData</strong></p></td>
+<td><p>X</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>RawData</strong></p></td>
+<td><p>X</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Cache</strong></p></td>
+<td><p>cache</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Temp</strong></p></td>
+<td><p>temporary</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>iOS와 Android의 경우, iCloud와 Google Play를 통해 클라우드에 유저 데이터를 백업할 수 있는 기능을 제공합니다.
+<strong>MainData</strong> 경로 내의 파일들은 백업 대상이 되며, 보존되어야 하는 유저 데이터를 저장하는데 사용할 수 있습니다.
+단, 클라우드 백업 가능한 데이터의 용량에는 제한이 있으므로, 전체 파일 크기에 신경을 써 주세요.</p>
+<p>컴퍼넌트가 반환하는 경로는 C/C++ 라이브러리를 통해 접근 및 조작 가능한 실제 파일 시스템 상의 경로입니다.</p>
+</div>
+<div class="section" id="id3">
+<h3>Non-Portable Interface<a class="headerlink" href="#id3" title="제목 주소">¶</a></h3>
+<p>Android 플랫폼에서는 SD 카드 등의 용량이 큰 외부 저장 공간을 사용할 수 있는 경우가 있습니다.
+외부 저장소 영역에 대한 접근 기능은 <code class="docutils literal notranslate"><span class="pre">Leggiero::FileSystem::NPO::INonPortableOptimization_BundleFileResource</span></code> 인터페이스를 통해 제공합니다.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="43_mod_graphics.html" class="btn btn-neutral float-right" title="Graphics Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="41_mod_application.html" class="btn btn-neutral float-left" title="Application Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 저작권 2021, Kim, Young Soo
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
