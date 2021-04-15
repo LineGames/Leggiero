@@ -1,0 +1,16 @@
+﻿////////////////////////////////////////////////////////////////////////////////
+// _Internal/_CommonTypes.cpp (Leggiero - Basic)
+//
+// Common type related implementations
+////////////////////////////////////////////////////////////////////////////////
+
+
+// My Header
+#include "_CommonTypes.h"
+
+
+namespace Leggiero
+{
+	// Empty String Value
+	const GameDataString g_EmptyGameDataString("");
+}

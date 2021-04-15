@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Module">
+      <UniqueIdentifier>{3a83849a-579a-4bfa-af64-7fd5cad942b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{c72bcf1e-bcb6-4c57-9cd9-ca4f97ac1b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module\Component">
+      <UniqueIdentifier>{e90e814e-ddf5-4a36-8235-95583c770883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module\Module">
+      <UniqueIdentifier>{4de27e05-30b1-41a7-90ad-fe2b530133d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Toolbox">
+      <UniqueIdentifier>{78447e0d-e0e8-4650-819c-7b44380fa57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Toolbox\Scene">
+      <UniqueIdentifier>{a788cb8a-1bee-4ba4-8d20-35289fdb8d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Toolbox\ModuledGame">
+      <UniqueIdentifier>{51d8f832-1897-439f-85ff-1f4cb62189eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Module\EngineComponent.cpp">
+      <Filter>Module\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\EngineComponentHolder.cpp">
+      <Filter>Module\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\EngineModuleInterface.cpp">
+      <Filter>Module\Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Toolbox\Scene\GameSceneHolder.cpp">
+      <Filter>Toolbox\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\BaseGame.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\GameProcessAnchor.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Toolbox\ModuledGame\ModuledGame.cpp">
+      <Filter>Toolbox\ModuledGame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Module\EngineComponent.h">
+      <Filter>Module\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\EngineComponentException.h">
+      <Filter>Module\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\EngineComponentHolder.h">
+      <Filter>Module\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\EngineModuleException.h">
+      <Filter>Module\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\EngineModuleInterface.h">
+      <Filter>Module\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\CreateGame.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\IGame.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\IPlatformApplication.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\EngineComponentId.h">
+      <Filter>Module\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\EngineModuleId.h">
+      <Filter>Module\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\IGameInitializer.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\IGameLaunchOption.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbox\Scene\GameSceneHolder.h">
+      <Filter>Toolbox\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbox\Scene\GameSceneTypes.h">
+      <Filter>Toolbox\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbox\Scene\IGameScene.h">
+      <Filter>Toolbox\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbox\Scene\IGameSceneContext.h">
+      <Filter>Toolbox\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\BaseGame.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\GameProcessAnchor.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbox\ModuledGame\ModuledGame.h">
+      <Filter>Toolbox\ModuledGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\GameProcessAnchorObserver.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

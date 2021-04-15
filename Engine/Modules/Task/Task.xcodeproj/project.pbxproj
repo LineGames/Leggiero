@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		162C47C625F11B6100956A15 /* TaskManagerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47C125F11B6100956A15 /* TaskManagerComponent.cpp */; };
+		162C47C725F11B6100956A15 /* ConcreteTaskManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47C325F11B6100956A15 /* ConcreteTaskManager.cpp */; };
+		162C47D525F11B9700956A15 /* DependentTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47D225F11B9600956A15 /* DependentTask.cpp */; };
+		162C47D625F11B9700956A15 /* SingleActionTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47D425F11B9600956A15 /* SingleActionTask.cpp */; };
+		162C47E025F11BAA00956A15 /* iOSTaskProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 162C47D825F11BAA00956A15 /* iOSTaskProcessor.mm */; };
+		162C47E125F11BAA00956A15 /* ThreadWorkerPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47D925F11BAA00956A15 /* ThreadWorkerPool.cpp */; };
+		162C47E225F11BAA00956A15 /* ThreadWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47DC25F11BAA00956A15 /* ThreadWorker.cpp */; };
+		162C47E525F11BB500956A15 /* TaskPlatform_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 162C47E425F11BB500956A15 /* TaskPlatform_iOS.mm */; };
+		162C47ED25F11C2B00956A15 /* GraphicTaskSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47E825F11C2B00956A15 /* GraphicTaskSystem.cpp */; };
+		162C47EE25F11C2B00956A15 /* GraphicThreadWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47EA25F11C2B00956A15 /* GraphicThreadWorker.cpp */; };
+		162C47EF25F11C2B00956A15 /* GraphicThreadWorkerPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162C47EC25F11C2B00956A15 /* GraphicThreadWorkerPool.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1673E57E25B7112D0018667D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		162C47C125F11B6100956A15 /* TaskManagerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TaskManagerComponent.cpp; sourceTree = "<group>"; };
+		162C47C225F11B6100956A15 /* TaskSubSystemInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSubSystemInterface.h; sourceTree = "<group>"; };
+		162C47C325F11B6100956A15 /* ConcreteTaskManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConcreteTaskManager.cpp; sourceTree = "<group>"; };
+		162C47C425F11B6100956A15 /* TaskTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTypes.h; sourceTree = "<group>"; };
+		162C47C525F11B6100956A15 /* TaskManagerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskManagerComponent.h; sourceTree = "<group>"; };
+		162C47CF25F11B9600956A15 /* ValueTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueTasks.h; path = Tasks/ValueTasks.h; sourceTree = "<group>"; };
+		162C47D025F11B9600956A15 /* DependentTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DependentTask.h; path = Tasks/DependentTask.h; sourceTree = "<group>"; };
+		162C47D125F11B9600956A15 /* SingleActionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleActionTask.h; path = Tasks/SingleActionTask.h; sourceTree = "<group>"; };
+		162C47D225F11B9600956A15 /* DependentTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DependentTask.cpp; path = Tasks/DependentTask.cpp; sourceTree = "<group>"; };
+		162C47D325F11B9600956A15 /* ITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITask.h; path = Tasks/ITask.h; sourceTree = "<group>"; };
+		162C47D425F11B9600956A15 /* SingleActionTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SingleActionTask.cpp; path = Tasks/SingleActionTask.cpp; sourceTree = "<group>"; };
+		162C47D825F11BAA00956A15 /* iOSTaskProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = iOSTaskProcessor.mm; path = Processor/iOSTaskProcessor.mm; sourceTree = "<group>"; };
+		162C47D925F11BAA00956A15 /* ThreadWorkerPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadWorkerPool.cpp; path = Processor/ThreadWorkerPool.cpp; sourceTree = "<group>"; };
+		162C47DA25F11BAA00956A15 /* ThreadWorkerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadWorkerPool.h; path = Processor/ThreadWorkerPool.h; sourceTree = "<group>"; };
+		162C47DB25F11BAA00956A15 /* ThreadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadWorker.h; path = Processor/ThreadWorker.h; sourceTree = "<group>"; };
+		162C47DC25F11BAA00956A15 /* ThreadWorker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadWorker.cpp; path = Processor/ThreadWorker.cpp; sourceTree = "<group>"; };
+		162C47DD25F11BAA00956A15 /* ITaskProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITaskProcessor.h; path = Processor/ITaskProcessor.h; sourceTree = "<group>"; };
+		162C47DE25F11BAA00956A15 /* IThreadWorkerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IThreadWorkerContext.h; path = Processor/IThreadWorkerContext.h; sourceTree = "<group>"; };
+		162C47DF25F11BAA00956A15 /* iOSTaskProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iOSTaskProcessor.h; path = Processor/iOSTaskProcessor.h; sourceTree = "<group>"; };
+		162C47E425F11BB500956A15 /* TaskPlatform_iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TaskPlatform_iOS.mm; path = Platform/TaskPlatform_iOS.mm; sourceTree = "<group>"; };
+		162C47E725F11C2B00956A15 /* GraphicThreadWorkerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicThreadWorkerPool.h; path = GraphicTask/GraphicThreadWorkerPool.h; sourceTree = "<group>"; };
+		162C47E825F11C2B00956A15 /* GraphicTaskSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicTaskSystem.cpp; path = GraphicTask/GraphicTaskSystem.cpp; sourceTree = "<group>"; };
+		162C47E925F11C2B00956A15 /* GraphicThreadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicThreadWorker.h; path = GraphicTask/GraphicThreadWorker.h; sourceTree = "<group>"; };
+		162C47EA25F11C2B00956A15 /* GraphicThreadWorker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicThreadWorker.cpp; path = GraphicTask/GraphicThreadWorker.cpp; sourceTree = "<group>"; };
+		162C47EB25F11C2B00956A15 /* GraphicTaskSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicTaskSystem.h; path = GraphicTask/GraphicTaskSystem.h; sourceTree = "<group>"; };
+		162C47EC25F11C2B00956A15 /* GraphicThreadWorkerPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicThreadWorkerPool.cpp; path = GraphicTask/GraphicThreadWorkerPool.cpp; sourceTree = "<group>"; };
+		162C47F125F11C3300956A15 /* _ConcreteTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _ConcreteTaskManager.h; path = _Internal/_ConcreteTaskManager.h; sourceTree = "<group>"; };
+		162C47F225F11C3300956A15 /* ITaskManagerSystemFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITaskManagerSystemFunctions.h; path = _Internal/ITaskManagerSystemFunctions.h; sourceTree = "<group>"; };
+		162C47F325F11C3300956A15 /* _TaskExecutionEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _TaskExecutionEntry.h; path = _Internal/_TaskExecutionEntry.h; sourceTree = "<group>"; };
+		1673E58025B7112D0018667D /* libLMTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLMTask.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1673E57D25B7112D0018667D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		162C47C925F11B6500956A15 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				162C47D225F11B9600956A15 /* DependentTask.cpp */,
+				162C47D025F11B9600956A15 /* DependentTask.h */,
+				162C47D325F11B9600956A15 /* ITask.h */,
+				162C47D425F11B9600956A15 /* SingleActionTask.cpp */,
+				162C47D125F11B9600956A15 /* SingleActionTask.h */,
+				162C47CF25F11B9600956A15 /* ValueTasks.h */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		162C47CB25F11B6C00956A15 /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				162C47DF25F11BAA00956A15 /* iOSTaskProcessor.h */,
+				162C47D825F11BAA00956A15 /* iOSTaskProcessor.mm */,
+				162C47DD25F11BAA00956A15 /* ITaskProcessor.h */,
+				162C47DE25F11BAA00956A15 /* IThreadWorkerContext.h */,
+				162C47DC25F11BAA00956A15 /* ThreadWorker.cpp */,
+				162C47DB25F11BAA00956A15 /* ThreadWorker.h */,
+				162C47D925F11BAA00956A15 /* ThreadWorkerPool.cpp */,
+				162C47DA25F11BAA00956A15 /* ThreadWorkerPool.h */,
+			);
+			name = Processor;
+			sourceTree = "<group>";
+		};
+		162C47CC25F11B7500956A15 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				162C47E425F11BB500956A15 /* TaskPlatform_iOS.mm */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
+		162C47CD25F11B7D00956A15 /* GraphicTask */ = {
+			isa = PBXGroup;
+			children = (
+				162C47E825F11C2B00956A15 /* GraphicTaskSystem.cpp */,
+				162C47EB25F11C2B00956A15 /* GraphicTaskSystem.h */,
+				162C47EA25F11C2B00956A15 /* GraphicThreadWorker.cpp */,
+				162C47E925F11C2B00956A15 /* GraphicThreadWorker.h */,
+				162C47EC25F11C2B00956A15 /* GraphicThreadWorkerPool.cpp */,
+				162C47E725F11C2B00956A15 /* GraphicThreadWorkerPool.h */,
+			);
+			name = GraphicTask;
+			sourceTree = "<group>";
+		};
+		162C47CE25F11B8500956A15 /* _Internal */ = {
+			isa = PBXGroup;
+			children = (
+				162C47F125F11C3300956A15 /* _ConcreteTaskManager.h */,
+				162C47F325F11C3300956A15 /* _TaskExecutionEntry.h */,
+				162C47F225F11C3300956A15 /* ITaskManagerSystemFunctions.h */,
+			);
+			name = _Internal;
+			sourceTree = "<group>";
+		};
+		1673E57725B7112D0018667D = {
+			isa = PBXGroup;
+			children = (
+				162C47CE25F11B8500956A15 /* _Internal */,
+				162C47CD25F11B7D00956A15 /* GraphicTask */,
+				162C47CC25F11B7500956A15 /* Platform */,
+				162C47CB25F11B6C00956A15 /* Processor */,
+				162C47C925F11B6500956A15 /* Tasks */,
+				162C47C325F11B6100956A15 /* ConcreteTaskManager.cpp */,
+				162C47C125F11B6100956A15 /* TaskManagerComponent.cpp */,
+				162C47C525F11B6100956A15 /* TaskManagerComponent.h */,
+				162C47C225F11B6100956A15 /* TaskSubSystemInterface.h */,
+				162C47C425F11B6100956A15 /* TaskTypes.h */,
+				1673E58125B7112D0018667D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1673E58125B7112D0018667D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1673E58025B7112D0018667D /* libLMTask.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1673E57F25B7112D0018667D /* LMTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1673E58925B7112D0018667D /* Build configuration list for PBXNativeTarget "LMTask" */;
+			buildPhases = (
+				1673E57C25B7112D0018667D /* Sources */,
+				1673E57D25B7112D0018667D /* Frameworks */,
+				1673E57E25B7112D0018667D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMTask;
+			productName = Basic;
+			productReference = 1673E58025B7112D0018667D /* libLMTask.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1673E57825B7112D0018667D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					1673E57F25B7112D0018667D = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 1673E57B25B7112D0018667D /* Build configuration list for PBXProject "Task" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1673E57725B7112D0018667D;
+			productRefGroup = 1673E58125B7112D0018667D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1673E57F25B7112D0018667D /* LMTask */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1673E57C25B7112D0018667D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162C47EE25F11C2B00956A15 /* GraphicThreadWorker.cpp in Sources */,
+				162C47D625F11B9700956A15 /* SingleActionTask.cpp in Sources */,
+				162C47EF25F11C2B00956A15 /* GraphicThreadWorkerPool.cpp in Sources */,
+				162C47E125F11BAA00956A15 /* ThreadWorkerPool.cpp in Sources */,
+				162C47ED25F11C2B00956A15 /* GraphicTaskSystem.cpp in Sources */,
+				162C47C625F11B6100956A15 /* TaskManagerComponent.cpp in Sources */,
+				162C47E025F11BAA00956A15 /* iOSTaskProcessor.mm in Sources */,
+				162C47C725F11B6100956A15 /* ConcreteTaskManager.cpp in Sources */,
+				162C47E525F11BB500956A15 /* TaskPlatform_iOS.mm in Sources */,
+				162C47D525F11B9700956A15 /* DependentTask.cpp in Sources */,
+				162C47E225F11BAA00956A15 /* ThreadWorker.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1673E58725B7112D0018667D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../Libraries/Dependent/iOS/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../Libraries/LeggieroLib,
+					"../../Libraries/Dependent/iOS/libjpeg-turbo/include",
+					../../Libraries/Dependent/iOS/FreeType/include,
+					../../Libraries/Dependent/iOS/oggvorbis/include,
+					../../Libraries/Dependent/iOS/cryptopp/include,
+					../../Libraries/Dependent/iOS/OpenSSL/include,
+					../../Common,
+					../../Platform/Platform.iOS,
+					..,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1673E58825B7112D0018667D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../Libraries/Dependent/iOS/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../Libraries/LeggieroLib,
+					"../../Libraries/Dependent/iOS/libjpeg-turbo/include",
+					../../Libraries/Dependent/iOS/FreeType/include,
+					../../Libraries/Dependent/iOS/oggvorbis/include,
+					../../Libraries/Dependent/iOS/cryptopp/include,
+					../../Libraries/Dependent/iOS/OpenSSL/include,
+					../../Common,
+					../../Platform/Platform.iOS,
+					..,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1673E58A25B7112D0018667D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1673E58B25B7112D0018667D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1673E57B25B7112D0018667D /* Build configuration list for PBXProject "Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1673E58725B7112D0018667D /* Debug */,
+				1673E58825B7112D0018667D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1673E58925B7112D0018667D /* Build configuration list for PBXNativeTarget "LMTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1673E58A25B7112D0018667D /* Debug */,
+				1673E58B25B7112D0018667D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1673E57825B7112D0018667D /* Project object */;
+}

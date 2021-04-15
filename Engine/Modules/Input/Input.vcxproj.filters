@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TouchInputComponent.cpp" />
+    <ClCompile Include="Touch\EventBasedTouchContext.cpp">
+      <Filter>Touch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IImmediateTouchInputEventObserver.h" />
+    <ClInclude Include="TouchInputComponent.h" />
+    <ClInclude Include="InputCommonTypes.h" />
+    <ClInclude Include="Touch\EventBasedTouchContext.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch\LastTouchState.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch\TouchEvent.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Touch">
+      <UniqueIdentifier>{b7867b71-bb47-43fa-a7ca-19e0d0457bfb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

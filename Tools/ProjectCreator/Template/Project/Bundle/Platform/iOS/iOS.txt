@@ -1,0 +1,1 @@
+This is a bundled resource for iOS Platform.

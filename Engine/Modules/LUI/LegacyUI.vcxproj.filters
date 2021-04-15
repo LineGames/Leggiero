@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Common\IUIArea.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\UICommonArea.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\UITransform.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\UIClippingComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\UILayoutComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\UISizeSubComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\UITransformComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="UIObject.cpp" />
+    <ClCompile Include="Touch\UITouch.cpp">
+      <Filter>Touch</Filter>
+    </ClCompile>
+    <ClCompile Include="Touch\UITouchComponent.cpp">
+      <Filter>Touch</Filter>
+    </ClCompile>
+    <ClCompile Include="Touch\UITouchNegotiator.cpp">
+      <Filter>Touch</Filter>
+    </ClCompile>
+    <ClCompile Include="Touch\ValuedTouchComponent.cpp">
+      <Filter>Touch</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\CachedTextRenderingComponent.cpp">
+      <Filter>Rendering\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\PatchedTextureRenderingComponent.cpp">
+      <Filter>Rendering\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\ShapeSetRenderingComponent.cpp">
+      <Filter>Rendering\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\TextRenderingComponent.cpp">
+      <Filter>Rendering\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\TextureRenderingComponent.cpp">
+      <Filter>Rendering\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UIClipping.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UIRenderer.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UIShaders.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UIShapeRect.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UITextureManager.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UIShaders_Shader.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader\UIBundleAssetLoader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\UICommonResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\UISceneBase.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementBlurredBarrier.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementCachedVariantText.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementCancelPanelArea.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementFixedText.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementSimpleHorizontalScrollPanel.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementSimpleSlideBar.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementSimpleVerticalScrollPanel.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementSingleSimpleButton.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementSlideBar.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementTestButton.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementTextInputBox.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Element\UIElementVariantText.cpp">
+      <Filter>Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\CommonButtonRenderingController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescription.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionColor.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionCommonExpression.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionExpression.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionFont.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionManager.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionProcessingContext.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionReader.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionTexture.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionTypes.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionUnit.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIPrefabDescription.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIPrefabDescription_Reader.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIFabricatedComponent.cpp">
+      <Filter>Prefab</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIPrefabCommonObjects.cpp">
+      <Filter>Prefab</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIComponentPrefab.cpp">
+      <Filter>Prefab\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UILayoutComponentPrefab.cpp">
+      <Filter>Prefab\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIPatchedTextureRenderingComponentPrefab.cpp">
+      <Filter>Prefab\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UITransformComponentPrefab.cpp">
+      <Filter>Prefab\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UITextureRenderingComponentPrefab.cpp">
+      <Filter>Prefab\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIShapeRenderingComponentPrefab.cpp">
+      <Filter>Prefab\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIObjectButtonPrefab.cpp">
+      <Filter>Prefab\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIObjectPrefab.cpp">
+      <Filter>Prefab\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIObjectScrollPanelPrefab.cpp">
+      <Filter>Prefab\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UIObjectSliderPrefab.cpp">
+      <Filter>Prefab\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UITextInputBoxPrefab.cpp">
+      <Filter>Prefab\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Prefab\UITextObjectPrefab.cpp">
+      <Filter>Prefab\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionSourcedString.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\UIFontFaceManager.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader\DummyUIAssetLoader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionSystemUnit.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader\UIFileAssetLoader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader\UITableAssetLoader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader\UIChainAssetLoader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Description\UIDescriptionParserUtility.cpp">
+      <Filter>Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\CommonControllerDefines.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\TextInputBoxRenderingController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\SimpleSliderRenderingController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\OnOffButtonController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8da5ea4d-9437-4fd6-88f7-2311c608b25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{e35af392-bd9b-4162-976f-3020719c2f0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Touch">
+      <UniqueIdentifier>{712f7c3e-5378-47eb-907c-9932b5c1998e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{c2ba54db-eae8-4120-aa8b-5cfe18e35ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Components">
+      <UniqueIdentifier>{f9266478-2c26-4d98-9b63-11d195390280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loader">
+      <UniqueIdentifier>{b00b9383-6cf8-4bd9-b4c8-2a9ed9708408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{81a574f5-012e-45eb-9333-45d8a4b9b377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Element">
+      <UniqueIdentifier>{f0886b65-6ea3-4502-853a-f965e7457c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{faea87d5-500b-47aa-adff-ec404a87da29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Description">
+      <UniqueIdentifier>{762605b7-8d7d-4915-b4ed-b7122a6ef3b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prefab">
+      <UniqueIdentifier>{440e1374-3eee-499a-886b-b28465ff1c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prefab\Component">
+      <UniqueIdentifier>{703345d1-0270-42e2-ad7d-379cc438cf2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prefab\Object">
+      <UniqueIdentifier>{7f309db1-b093-4f99-b26e-9916138b35bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\IUIArea.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UICommonArea.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UICommonTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UISizeSettable.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UITransform.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\IUIComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\UIClippingComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\UIComponentType.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\UILayoutComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\UISizeSubComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\UITransformComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="UIObject.h" />
+    <ClInclude Include="Touch\UITouch.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch\UITouchComponent.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch\UITouchNegotiator.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch\ValuedTouchComponent.h">
+      <Filter>Touch</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\CachedTextRenderingComponent.h">
+      <Filter>Rendering\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\PatchedTextureRenderingComponent.h">
+      <Filter>Rendering\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\ShapeSetRenderingComponent.h">
+      <Filter>Rendering\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\TextRenderingComponent.h">
+      <Filter>Rendering\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\TextureRenderingComponent.h">
+      <Filter>Rendering\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIRenderingComponent.h">
+      <Filter>Rendering\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\IUIRenderingShape.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIClipping.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIRenderer.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIRenderingUtility.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIShaders.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIShapeRect.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UITexture.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UITextureManager.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader\IUIAssetLoader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader\UIBundleAssetLoader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UICommonResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\UISceneBase.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementBlurredBarrier.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementCachedVariantText.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementCancelPanelArea.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementFixedText.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementSimpleHorizontalScrollPanel.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementSimpleSlideBar.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementSimpleVerticalScrollPanel.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementSingleSimpleButton.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementSlideBar.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementTestButton.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementTextInputBox.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Element\UIElementVariantText.h">
+      <Filter>Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\CommonButtonRenderingController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescription.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionColor.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionCommonExpression.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionExpression.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionExpression_Nodes.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionFont.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionManager.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionProcessingContext.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionReader.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionTexture.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionTypes.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionUnit.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIPrefabDescription.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIPrefabDescription_Reader.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIFabricatedComponent.h">
+      <Filter>Prefab</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIPrefabCommonObjects.h">
+      <Filter>Prefab</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIPrefabPlaceProcessor.h">
+      <Filter>Prefab</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIComponentPrefab.h">
+      <Filter>Prefab\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UILayoutComponentPrefab.h">
+      <Filter>Prefab\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIPatchedTextureRenderingComponentPrefab.h">
+      <Filter>Prefab\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UITransformComponentPrefab.h">
+      <Filter>Prefab\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UITextureRenderingComponentPrefab.h">
+      <Filter>Prefab\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIShapeRenderingComponentPrefab.h">
+      <Filter>Prefab\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIObjectButtonPrefab.h">
+      <Filter>Prefab\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIObjectPrefab.h">
+      <Filter>Prefab\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIObjectScrollPanelPrefab.h">
+      <Filter>Prefab\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UIObjectSliderPrefab.h">
+      <Filter>Prefab\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UITextInputBoxPrefab.h">
+      <Filter>Prefab\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Prefab\UITextObjectPrefab.h">
+      <Filter>Prefab\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionSourcedString.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\UIFontFaceManager.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader\DummyUIAssetLoader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionSystemUnit.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader\UIFileAssetLoader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader\UITableAssetLoader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader\UIChainAssetLoader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Description\UIDescriptionParserUtility.h">
+      <Filter>Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\CommonControllerDefines.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\TextInputBoxRenderingController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\SimpleSliderRenderingController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\OnOffButtonController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Description\UIDescriptionExpression_CastEvaluation.inl">
+      <Filter>Description</Filter>
+    </None>
+    <None Include="Description\UIDescriptionExpression_CastValue.inl">
+      <Filter>Description</Filter>
+    </None>
+    <None Include="Description\UIDescriptionExpression_NodesEvaluation.inl">
+      <Filter>Description</Filter>
+    </None>
+    <None Include="Description\UIDescriptionExpression_Reader.inl">
+      <Filter>Description</Filter>
+    </None>
+    <None Include="Description\UIDescriptionVariable_ValueGetter.inl">
+      <Filter>Description</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="AndroidPlatformApplication.h" />
+    <ClInclude Include="AndroidCommon.h" />
+    <ClInclude Include="AndroidPlatform\_JNIInternal.h">
+      <Filter>AndroidPlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="AndroidPlatform\AndroidJNISupport.h">
+      <Filter>AndroidPlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="AndroidPlatformSetting.h" />
+    <ClInclude Include="Service\AndroidTextInputDialog.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\AndroidWebView.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AndroidPlatformApplication.cpp" />
+    <ClCompile Include="AndroidPlatform\AndroidJNISupport.cpp">
+      <Filter>AndroidPlatform</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidPlatform\ApplicationJNIInterface.cpp">
+      <Filter>AndroidPlatform</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidPlatformApplication_Events.cpp" />
+    <ClCompile Include="AndroidPlatformApplication_Touch.cpp" />
+    <ClCompile Include="AndroidApplicationComponent.cpp" />
+    <ClCompile Include="Service\AndroidTextInputDialog.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\AndroidWebView.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidPlatform\TouchJNIInterface.cpp">
+      <Filter>AndroidPlatform</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidPlatform\OpenGL\OpenGLJNI.cpp">
+      <Filter>AndroidPlatform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidPlatform\OpenGL\PlatformGLThreadContext.cpp">
+      <Filter>AndroidPlatform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidPlatformApplication_AppControl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Java">
+      <UniqueIdentifier>{2231cdb7-e3f2-4bee-b8b1-d4fcbe590f38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java\com.leggiero.Engine">
+      <UniqueIdentifier>{73d75521-2da5-4066-bed1-434861b9c08c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java\com.leggiero.Engine\OpenGL">
+      <UniqueIdentifier>{965ae2a0-1586-4ac9-af0b-d6a535410dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java\com.leggiero.Engine\Service">
+      <UniqueIdentifier>{60b0f68b-f9d7-4372-8f53-dd247ee93252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AndroidPlatform">
+      <UniqueIdentifier>{31b179e3-78f1-44eb-afb8-b2a09bf00a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{ba4d5c66-e29f-4a3d-90ee-06c53aa23328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AndroidPlatform\OpenGL">
+      <UniqueIdentifier>{0e63d345-1576-481b-84c6-8b38305157ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="Java\com\leggiero\Engine\OpenGL\GLSurfaceView.java">
+      <Filter>Java\com.leggiero.Engine\OpenGL</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\OpenGL\LeggieroGLRenderer.java">
+      <Filter>Java\com.leggiero.Engine\OpenGL</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\OpenGL\LeggieroGLSurfaceView.java">
+      <Filter>Java\com.leggiero.Engine\OpenGL</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\ApplicationReferrerReceiver.java">
+      <Filter>Java\com.leggiero.Engine</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\LeggieroActivity.java">
+      <Filter>Java\com.leggiero.Engine</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\LeggieroApplication.java">
+      <Filter>Java\com.leggiero.Engine</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\LeggieroUtils.java">
+      <Filter>Java\com.leggiero.Engine</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\Service\LeggieroInputDialog.java">
+      <Filter>Java\com.leggiero.Engine\Service</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\Service\LeggieroWebView.java">
+      <Filter>Java\com.leggiero.Engine\Service</Filter>
+    </JCompile>
+    <JCompile Include="Java\com\leggiero\Engine\Service\URLActivity.java">
+      <Filter>Java\com.leggiero.Engine\Service</Filter>
+    </JCompile>
+  </ItemGroup>
+</Project>

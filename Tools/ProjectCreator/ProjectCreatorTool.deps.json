@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ProjectCreatorTool/1.0.0": {
+        "dependencies": {
+          "ProjectCreatorCore": "1.0.0"
+        },
+        "runtime": {
+          "ProjectCreatorTool.dll": {}
+        }
+      },
+      "ProjectCreatorCore/1.0.0": {
+        "runtime": {
+          "ProjectCreatorCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProjectCreatorTool/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProjectCreatorCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

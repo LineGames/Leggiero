@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1630460525D18BB40062C67F /* GameProcessAnchor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 163045FC25D18BB30062C67F /* GameProcessAnchor.cpp */; };
+		1630460625D18BB40062C67F /* BaseGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1630460025D18BB30062C67F /* BaseGame.cpp */; };
+		1630461125D18BD50062C67F /* EngineComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1630460B25D18BD40062C67F /* EngineComponent.cpp */; };
+		1630461225D18BD50062C67F /* EngineComponentHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1630460C25D18BD40062C67F /* EngineComponentHolder.cpp */; };
+		1630461825D18BE40062C67F /* EngineModuleInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1630461425D18BE40062C67F /* EngineModuleInterface.cpp */; };
+		1630461E25D18C060062C67F /* ModuledGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1630461D25D18C060062C67F /* ModuledGame.cpp */; };
+		1630462525D18C130062C67F /* GameSceneHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1630462025D18C130062C67F /* GameSceneHolder.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1673E57E25B7112D0018667D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		163045FB25D18BB30062C67F /* CreateGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateGame.h; path = Application/CreateGame.h; sourceTree = "<group>"; };
+		163045FC25D18BB30062C67F /* GameProcessAnchor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameProcessAnchor.cpp; path = Application/GameProcessAnchor.cpp; sourceTree = "<group>"; };
+		163045FD25D18BB30062C67F /* GameProcessAnchor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameProcessAnchor.h; path = Application/GameProcessAnchor.h; sourceTree = "<group>"; };
+		163045FE25D18BB30062C67F /* IGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGame.h; path = Application/IGame.h; sourceTree = "<group>"; };
+		163045FF25D18BB30062C67F /* IGameLaunchOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGameLaunchOption.h; path = Application/IGameLaunchOption.h; sourceTree = "<group>"; };
+		1630460025D18BB30062C67F /* BaseGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseGame.cpp; path = Application/BaseGame.cpp; sourceTree = "<group>"; };
+		1630460125D18BB30062C67F /* IGameInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGameInitializer.h; path = Application/IGameInitializer.h; sourceTree = "<group>"; };
+		1630460225D18BB40062C67F /* GameProcessAnchorObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameProcessAnchorObserver.h; path = Application/GameProcessAnchorObserver.h; sourceTree = "<group>"; };
+		1630460325D18BB40062C67F /* BaseGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseGame.h; path = Application/BaseGame.h; sourceTree = "<group>"; };
+		1630460425D18BB40062C67F /* IPlatformApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlatformApplication.h; path = Application/IPlatformApplication.h; sourceTree = "<group>"; };
+		1630460B25D18BD40062C67F /* EngineComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineComponent.cpp; path = Module/EngineComponent.cpp; sourceTree = "<group>"; };
+		1630460C25D18BD40062C67F /* EngineComponentHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineComponentHolder.cpp; path = Module/EngineComponentHolder.cpp; sourceTree = "<group>"; };
+		1630460D25D18BD50062C67F /* EngineComponentHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineComponentHolder.h; path = Module/EngineComponentHolder.h; sourceTree = "<group>"; };
+		1630460E25D18BD50062C67F /* EngineComponentId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineComponentId.h; path = Module/EngineComponentId.h; sourceTree = "<group>"; };
+		1630460F25D18BD50062C67F /* EngineComponentException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineComponentException.h; path = Module/EngineComponentException.h; sourceTree = "<group>"; };
+		1630461025D18BD50062C67F /* EngineComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineComponent.h; path = Module/EngineComponent.h; sourceTree = "<group>"; };
+		1630461425D18BE40062C67F /* EngineModuleInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineModuleInterface.cpp; path = Module/EngineModuleInterface.cpp; sourceTree = "<group>"; };
+		1630461525D18BE40062C67F /* EngineModuleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineModuleInterface.h; path = Module/EngineModuleInterface.h; sourceTree = "<group>"; };
+		1630461625D18BE40062C67F /* EngineModuleId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineModuleId.h; path = Module/EngineModuleId.h; sourceTree = "<group>"; };
+		1630461725D18BE40062C67F /* EngineModuleException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineModuleException.h; path = Module/EngineModuleException.h; sourceTree = "<group>"; };
+		1630461C25D18C060062C67F /* ModuledGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuledGame.h; path = Toolbox/ModuledGame/ModuledGame.h; sourceTree = "<group>"; };
+		1630461D25D18C060062C67F /* ModuledGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModuledGame.cpp; path = Toolbox/ModuledGame/ModuledGame.cpp; sourceTree = "<group>"; };
+		1630462025D18C130062C67F /* GameSceneHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameSceneHolder.cpp; path = Toolbox/Scene/GameSceneHolder.cpp; sourceTree = "<group>"; };
+		1630462125D18C130062C67F /* GameSceneHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameSceneHolder.h; path = Toolbox/Scene/GameSceneHolder.h; sourceTree = "<group>"; };
+		1630462225D18C130062C67F /* IGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGameScene.h; path = Toolbox/Scene/IGameScene.h; sourceTree = "<group>"; };
+		1630462325D18C130062C67F /* IGameSceneContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGameSceneContext.h; path = Toolbox/Scene/IGameSceneContext.h; sourceTree = "<group>"; };
+		1630462425D18C130062C67F /* GameSceneTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameSceneTypes.h; path = Toolbox/Scene/GameSceneTypes.h; sourceTree = "<group>"; };
+		1673E58025B7112D0018667D /* libLCEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLCEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1673E57D25B7112D0018667D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		163045F725D18B8E0062C67F /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				1630461B25D18BF30062C67F /* ModuledGame */,
+				1630461A25D18BEE0062C67F /* Scene */,
+			);
+			name = Toolbox;
+			sourceTree = "<group>";
+		};
+		163045F925D18B9E0062C67F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1630460A25D18BC40062C67F /* Component */,
+				1630460925D18BBD0062C67F /* Module */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		163045FA25D18BA50062C67F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1630460025D18BB30062C67F /* BaseGame.cpp */,
+				1630460325D18BB40062C67F /* BaseGame.h */,
+				163045FB25D18BB30062C67F /* CreateGame.h */,
+				163045FC25D18BB30062C67F /* GameProcessAnchor.cpp */,
+				163045FD25D18BB30062C67F /* GameProcessAnchor.h */,
+				1630460225D18BB40062C67F /* GameProcessAnchorObserver.h */,
+				163045FE25D18BB30062C67F /* IGame.h */,
+				1630460125D18BB30062C67F /* IGameInitializer.h */,
+				163045FF25D18BB30062C67F /* IGameLaunchOption.h */,
+				1630460425D18BB40062C67F /* IPlatformApplication.h */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		1630460925D18BBD0062C67F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1630461725D18BE40062C67F /* EngineModuleException.h */,
+				1630461625D18BE40062C67F /* EngineModuleId.h */,
+				1630461425D18BE40062C67F /* EngineModuleInterface.cpp */,
+				1630461525D18BE40062C67F /* EngineModuleInterface.h */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		1630460A25D18BC40062C67F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				1630460B25D18BD40062C67F /* EngineComponent.cpp */,
+				1630461025D18BD50062C67F /* EngineComponent.h */,
+				1630460F25D18BD50062C67F /* EngineComponentException.h */,
+				1630460C25D18BD40062C67F /* EngineComponentHolder.cpp */,
+				1630460D25D18BD50062C67F /* EngineComponentHolder.h */,
+				1630460E25D18BD50062C67F /* EngineComponentId.h */,
+			);
+			name = Component;
+			sourceTree = "<group>";
+		};
+		1630461A25D18BEE0062C67F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1630462025D18C130062C67F /* GameSceneHolder.cpp */,
+				1630462125D18C130062C67F /* GameSceneHolder.h */,
+				1630462425D18C130062C67F /* GameSceneTypes.h */,
+				1630462225D18C130062C67F /* IGameScene.h */,
+				1630462325D18C130062C67F /* IGameSceneContext.h */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		1630461B25D18BF30062C67F /* ModuledGame */ = {
+			isa = PBXGroup;
+			children = (
+				1630461D25D18C060062C67F /* ModuledGame.cpp */,
+				1630461C25D18C060062C67F /* ModuledGame.h */,
+			);
+			name = ModuledGame;
+			sourceTree = "<group>";
+		};
+		1673E57725B7112D0018667D = {
+			isa = PBXGroup;
+			children = (
+				163045FA25D18BA50062C67F /* Application */,
+				163045F925D18B9E0062C67F /* Module */,
+				163045F725D18B8E0062C67F /* Toolbox */,
+				1673E58125B7112D0018667D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1673E58125B7112D0018667D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1673E58025B7112D0018667D /* libLCEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1673E57F25B7112D0018667D /* LCEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1673E58925B7112D0018667D /* Build configuration list for PBXNativeTarget "LCEngine" */;
+			buildPhases = (
+				1673E57C25B7112D0018667D /* Sources */,
+				1673E57D25B7112D0018667D /* Frameworks */,
+				1673E57E25B7112D0018667D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LCEngine;
+			productName = Basic;
+			productReference = 1673E58025B7112D0018667D /* libLCEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1673E57825B7112D0018667D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					1673E57F25B7112D0018667D = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 1673E57B25B7112D0018667D /* Build configuration list for PBXProject "Engine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1673E57725B7112D0018667D;
+			productRefGroup = 1673E58125B7112D0018667D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1673E57F25B7112D0018667D /* LCEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1673E57C25B7112D0018667D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1630462525D18C130062C67F /* GameSceneHolder.cpp in Sources */,
+				1630461E25D18C060062C67F /* ModuledGame.cpp in Sources */,
+				1630461125D18BD50062C67F /* EngineComponent.cpp in Sources */,
+				1630461225D18BD50062C67F /* EngineComponentHolder.cpp in Sources */,
+				1630460625D18BB40062C67F /* BaseGame.cpp in Sources */,
+				1630460525D18BB40062C67F /* GameProcessAnchor.cpp in Sources */,
+				1630461825D18BE40062C67F /* EngineModuleInterface.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1673E58725B7112D0018667D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../Libraries/Dependent/iOS/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../Libraries/LeggieroLib,
+					"../../Libraries/Dependent/iOS/libjpeg-turbo/include",
+					..,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1673E58825B7112D0018667D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../Libraries/Dependent/iOS/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../Libraries/LeggieroLib,
+					"../../Libraries/Dependent/iOS/libjpeg-turbo/include",
+					..,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1673E58A25B7112D0018667D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1673E58B25B7112D0018667D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1673E57B25B7112D0018667D /* Build configuration list for PBXProject "Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1673E58725B7112D0018667D /* Debug */,
+				1673E58825B7112D0018667D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1673E58925B7112D0018667D /* Build configuration list for PBXNativeTarget "LCEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1673E58A25B7112D0018667D /* Debug */,
+				1673E58B25B7112D0018667D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1673E57825B7112D0018667D /* Project object */;
+}

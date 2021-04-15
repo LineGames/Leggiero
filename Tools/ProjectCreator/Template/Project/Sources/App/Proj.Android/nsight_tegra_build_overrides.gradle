@@ -1,0 +1,93 @@
+buildscript {
+
+	def prefix = 'nsight_tegra_build_properties'
+    def propertyName = "${prefix}_file_path"
+    def propertyFileName = "${prefix}.gradle"
+    def propertyFilePath = ext.has(propertyName) ? ext[propertyName] ?: propertyFileName : propertyFileName
+    apply from: propertyFilePath
+	
+    repositories {
+        google()
+        jcenter()
+        // Work around https://code.google.com/p/android/issues/detail?id=69270.
+        def androidHome = System.getenv("ANDROID_HOME")
+        maven {
+            url "$androidHome/extras/android/m2repository/"
+        }
+        maven {
+		    url "$androidHome/extras/google/m2repository/"
+        }
+		mavenCentral()
+    }
+	
+    dependencies {
+        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.google.android.gms:play-services-auth:10.0.1'
+    }
+}
+
+apply plugin: "com.android.application"
+
+buildDir = nsight_tegra_build_dir
+archivesBaseName = nsight_tegra_project_name
+
+android {
+    compileSdkVersion nsight_tegra_compile_sdk_version
+    buildToolsVersion nsight_tegra_build_tools_version
+
+    sourceSets.main {
+		setRoot nsight_tegra_msbuild_project_dir
+        if (project.hasProperty('nsight_tegra_package_manifest_path')) {
+            manifest.srcFile nsight_tegra_package_manifest_path
+        }
+        jni.srcDirs = nsight_tegra_jni_src_dirs
+        jniLibs.srcDirs = nsight_tegra_jni_libs_dirs + (nsight_tegra_msbuild_project_dir + "../../../../Engine/Libraries/Dependent/Android/jniLibs/")
+        java.srcDirs = nsight_tegra_java_src_dirs
+        assets.srcDirs = nsight_tegra_asset_dirs
+    }
+
+    defaultConfig {
+		defaultConfig.applicationId = "${{AppIdentifier}}"
+        if (project.hasProperty('nsight_tegra_min_sdk_version')) {
+            minSdkVersion nsight_tegra_min_sdk_version
+        }
+        if (project.hasProperty('nsight_tegra_target_sdk_version')) {
+            targetSdkVersion nsight_tegra_target_sdk_version
+        }
+        if (project.hasProperty('nsight_tegra_max_sdk_version')) {
+            maxSdkVersion nsight_tegra_max_sdk_version
+        }
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+	
+	packagingOptions {
+		exclude 'META-INF/DEPENDENCIES'
+		exclude 'META-INF/NOTICE'
+		exclude 'META-INF/LICENSE'
+		exclude 'META-INF/LICENSE.txt'
+		exclude 'META-INF/NOTICE.txt'
+    }
+    
+    useLibrary 'org.apache.http.legacy'
+}
+
+ repositories {
+		flatDir {
+			dirs project.ext.nsight_tegra_msbuild_project_dir + "libs"	 
+		}
+        google()
+        jcenter()
+		mavenCentral()
+		maven { 			
+			url "https://maven.google.com"
+		}
+    }
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:support-v4:+'
+}

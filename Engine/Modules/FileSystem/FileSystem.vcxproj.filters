@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="BundleFileResourceComponent.cpp" />
+    <ClCompile Include="_Internal\_WinPCBundleFileResourceComponent.cpp">
+      <Filter>_Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemUtility.cpp" />
+    <ClCompile Include="FileSystemUtility_WinPC.cpp" />
+    <ClCompile Include="FileSystemUtility_Android.cpp" />
+    <ClCompile Include="FileSystemPathComponent.cpp" />
+    <ClCompile Include="_Internal\_WinPCFileSystemPathComponent.cpp">
+      <Filter>_Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="_Internal\_AndroidBundleFileResourceComponent.cpp">
+      <Filter>_Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="_Internal\_AndroidFileSystemJNIInterface.cpp">
+      <Filter>_Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="_Internal\_AndroidFileSystemPathComponent.cpp">
+      <Filter>_Internal</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Internal">
+      <UniqueIdentifier>{d2608839-bc1e-4850-a01d-cc9d52ef8b7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java">
+      <UniqueIdentifier>{39020530-7662-485f-95e0-789151f94666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java\com.leggiero.Engine.Modules.FileSystem">
+      <UniqueIdentifier>{cf3a72fd-5195-4eeb-b3a4-b2b851171ef9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BundleFileResourceComponent.h" />
+    <ClInclude Include="BundleFileResourceComponent_NPO.h" />
+    <ClInclude Include="_Internal\_WinPCBundleFileResourceComponent.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystemUtility.h" />
+    <ClInclude Include="FileSystemPathComponent.h" />
+    <ClInclude Include="FileSystemPathComponent_NPO.h" />
+    <ClInclude Include="_Internal\_WinPCFileSystemPathComponent.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="_Internal\_AndroidBundleFileResourceComponent.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="_Internal\_AndroidFileSystemPathComponent.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="Java\com\leggiero\Engine\Modules\FileSystem\FileSystemHelper.java">
+      <Filter>Java\com.leggiero.Engine.Modules.FileSystem</Filter>
+    </JCompile>
+  </ItemGroup>
+</Project>

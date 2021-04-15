@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="NsightTegraProject">
+    <NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AArch64-Android-NVIDIA">
+      <Configuration>Debug</Configuration>
+      <Platform>AArch64-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM-Android-NVIDIA">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Tegra-Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AArch64-Android-NVIDIA">
+      <Configuration>Release</Configuration>
+      <Platform>AArch64-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM-Android-NVIDIA">
+      <Configuration>Release</Configuration>
+      <Platform>ARM-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Tegra-Android">
+      <Configuration>Release</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|AArch64-Android-NVIDIA">
+      <Configuration>Shipping</Configuration>
+      <Platform>AArch64-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|ARM-Android-NVIDIA">
+      <Configuration>Shipping</Configuration>
+      <Platform>ARM-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|Tegra-Android">
+      <Configuration>Shipping</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{${{GUID-AppAndroid:U}}}</ProjectGuid>
+    <RootNamespace>${{ProgramName}}_Android</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <AndroidBuildSystem>GradleBuild</AndroidBuildSystem>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+    <AndroidArch>multiple</AndroidArch>
+    <PlatformsToPackage>ARM;AArch64</PlatformsToPackage>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <AndroidBuildSystem>GradleBuild</AndroidBuildSystem>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+    <AndroidArch>multiple</AndroidArch>
+    <PlatformsToPackage>ARM;AArch64</PlatformsToPackage>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <AndroidBuildSystem>GradleBuild</AndroidBuildSystem>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+    <AndroidArch>multiple</AndroidArch>
+    <PlatformsToPackage>ARM;AArch64</PlatformsToPackage>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AArch64-Android-NVIDIA'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|AArch64-Android-NVIDIA'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Shipping|AArch64-Android-NVIDIA'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM-Android-NVIDIA'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|ARM-Android-NVIDIA'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Shipping|ARM-Android-NVIDIA'">
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+    <OutDir>$(SolutionDir)Binary\Android\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+    <OutDir>$(SolutionDir)Binary\Android\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+    <OutDir>$(SolutionDir)Binary\Android\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AArch64-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AArch64-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|AArch64-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|ARM-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\build\$(ProjectName)\</IntDir>
+    <TargetName>lib${{ProgramName-Lower}}app_android</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+    </ClCompile>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AndroidSystemLibs>android;GLESv2;EGL;%(AndroidSystemLibs)</AndroidSystemLibs>
+    </Link>
+    <AntBuild>
+      <GradleBuildScriptOverridePath>nsight_tegra_build_overrides.gradle</GradleBuildScriptOverridePath>
+      <EnableGradleBuildScriptOverride>true</EnableGradleBuildScriptOverride>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+      <SkipAntStep>False</SkipAntStep>
+      <NativeLibDependencies>
+      </NativeLibDependencies>
+      <NativeLibDirectories>
+      </NativeLibDirectories>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+    </ClCompile>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AndroidSystemLibs>android;GLESv2;EGL;%(AndroidSystemLibs)</AndroidSystemLibs>
+    </Link>
+    <AntBuild>
+      <GradleBuildScriptOverridePath>nsight_tegra_build_overrides.gradle</GradleBuildScriptOverridePath>
+      <EnableGradleBuildScriptOverride>true</EnableGradleBuildScriptOverride>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+      <SkipAntStep>False</SkipAntStep>
+      <NativeLibDependencies>
+      </NativeLibDependencies>
+      <NativeLibDirectories>
+      </NativeLibDirectories>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+    </ClCompile>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AndroidSystemLibs>android;GLESv2;EGL;%(AndroidSystemLibs)</AndroidSystemLibs>
+    </Link>
+    <AntBuild>
+      <GradleBuildScriptOverridePath>nsight_tegra_build_overrides.gradle</GradleBuildScriptOverridePath>
+      <EnableGradleBuildScriptOverride>true</EnableGradleBuildScriptOverride>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+      <SkipAntStep>False</SkipAntStep>
+      <NativeLibDependencies>
+      </NativeLibDependencies>
+      <NativeLibDirectories>
+      </NativeLibDirectories>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AArch64-Android-NVIDIA'">
+    <AntBuild>
+      <SkipAntStep>True</SkipAntStep>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+    </AntBuild>
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\LeggieroLib\;$(ProjectDir)..\..\..\..\Engine\Common\;$(ProjectDir)..\..\..\..\Engine\Modules\;$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\;$(ProjectDir)..\..\${{ProgramName}}\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AndroidSystemLibs>z;android;GLESv3;EGL;OpenSLES;%(AndroidSystemLibs)</AndroidSystemLibs>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libjpeg-turbo\lib\64bit;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\FreeType\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\oboe\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libogg\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libvorbis\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\OpenSSL\lib\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\curl\libs\aarch64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg;turbojpeg;freetype;oboe;vorbisfile;vorbisenc;vorbis;ogg;curl;ssl;crypto;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>-fPIC %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|AArch64-Android-NVIDIA'">
+    <AntBuild>
+      <SkipAntStep>True</SkipAntStep>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+    </AntBuild>
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\LeggieroLib\;$(ProjectDir)..\..\..\..\Engine\Common\;$(ProjectDir)..\..\..\..\Engine\Modules\;$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\;$(ProjectDir)..\..\${{ProgramName}}\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AndroidSystemLibs>z;android;GLESv3;EGL;OpenSLES;%(AndroidSystemLibs)</AndroidSystemLibs>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libjpeg-turbo\lib\64bit;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\FreeType\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\oboe\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libogg\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libvorbis\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\OpenSSL\lib\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\curl\libs\aarch64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg;turbojpeg;freetype;oboe;vorbisfile;vorbisenc;vorbis;ogg;curl;ssl;crypto;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>-fPIC %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|AArch64-Android-NVIDIA'">
+    <AntBuild>
+      <SkipAntStep>True</SkipAntStep>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+    </AntBuild>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libjpeg-turbo\lib\64bit;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\FreeType\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\oboe\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libogg\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libvorbis\libs\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\OpenSSL\lib\aarch64;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\curl\libs\aarch64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg;turbojpeg;freetype;oboe;vorbisfile;vorbisenc;vorbis;ogg;curl;ssl;crypto;%(AdditionalDependencies)</AdditionalDependencies>
+      <AndroidSystemLibs>z;android;GLESv3;EGL;OpenSLES;%(AndroidSystemLibs)</AndroidSystemLibs>
+      <AdditionalOptions>-fPIC %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\LeggieroLib\;$(ProjectDir)..\..\..\..\Engine\Common\;$(ProjectDir)..\..\..\..\Engine\Modules\;$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\;$(ProjectDir)..\..\${{ProgramName}}\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM-Android-NVIDIA'">
+    <AntBuild>
+      <SkipAntStep>True</SkipAntStep>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+    </AntBuild>
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\LeggieroLib\;$(ProjectDir)..\..\..\..\Engine\Common\;$(ProjectDir)..\..\..\..\Engine\Modules\;$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\;$(ProjectDir)..\..\${{ProgramName}}\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AndroidSystemLibs>z;android;GLESv3;EGL;OpenSLES;%(AndroidSystemLibs)</AndroidSystemLibs>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libjpeg-turbo\lib\32bit;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\FreeType\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\oboe\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libogg\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libvorbis\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\OpenSSL\lib\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\curl\libs\arm;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg;turbojpeg;freetype;oboe;vorbisfile;vorbisenc;vorbis;ogg;curl;ssl;crypto;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>-fPIC %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM-Android-NVIDIA'">
+    <AntBuild>
+      <SkipAntStep>True</SkipAntStep>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+    </AntBuild>
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\LeggieroLib\;$(ProjectDir)..\..\..\..\Engine\Common\;$(ProjectDir)..\..\..\..\Engine\Modules\;$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\;$(ProjectDir)..\..\${{ProgramName}}\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AndroidSystemLibs>z;android;GLESv3;EGL;OpenSLES;%(AndroidSystemLibs)</AndroidSystemLibs>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libjpeg-turbo\lib\32bit;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\FreeType\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\oboe\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libogg\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libvorbis\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\OpenSSL\lib\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\curl\libs\arm;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg;turbojpeg;freetype;oboe;vorbisfile;vorbisenc;vorbis;ogg;curl;ssl;crypto;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>-fPIC %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|ARM-Android-NVIDIA'">
+    <AntBuild>
+      <SkipAntStep>True</SkipAntStep>
+      <AssetsDirectories>$(ProjectDir)..\..\..\Bundle\Base\;$(ProjectDir)..\..\..\Bundle\Platform\Android\;%(AssetsDirectories)</AssetsDirectories>
+      <JavaSourceDir>$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\FileSystem\Java\;$(ProjectDir)..\..\..\..\Engine\Modules\Sound\Java\;%(JavaSourceDir)</JavaSourceDir>
+    </AntBuild>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libjpeg-turbo\lib\32bit;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\FreeType\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\oboe\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libogg\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\libvorbis\libs\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\OpenSSL\lib\arm;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Android\curl\libs\arm;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg;turbojpeg;freetype;oboe;vorbisfile;vorbisenc;vorbis;ogg;curl;ssl;crypto;%(AdditionalDependencies)</AdditionalDependencies>
+      <AndroidSystemLibs>z;android;GLESv3;EGL;OpenSLES;%(AndroidSystemLibs)</AndroidSystemLibs>
+      <AdditionalOptions>-fPIC %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\LeggieroLib\;$(ProjectDir)..\..\..\..\Engine\Common\;$(ProjectDir)..\..\..\..\Engine\Modules\;$(ProjectDir)..\..\..\..\Engine\Platform\Platform.Android\;$(ProjectDir)..\..\${{ProgramName}}\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="res\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="${{ProgramName}}Android.cpp" />
+    <ClCompile Include="${{ProgramName}}AndroidSetting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\com\leggiero\Engine\LeggieroProjectSetting.java" />
+    <JCompile Include="src\com\leggiero\${{ProgramName}}\${{ProgramName}}Activity.java" />
+    <JCompile Include="src\com\leggiero\${{ProgramName}}\${{ProgramName}}Application.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nsight_tegra_build_overrides.gradle" />
+    <None Include="res\drawable-hdpi\ic_launcher.png" />
+    <None Include="res\drawable-mdpi\ic_launcher.png" />
+    <None Include="res\drawable-xhdpi\ic_launcher.png" />
+    <None Include="res\drawable-xxhdpi\ic_launcher.png" />
+    <None Include="res\drawable-xxxhdpi\ic_launcher.png" />
+    <None Include="res\layout\input_dialog.xml" />
+    <None Include="res\layout\webview.xml" />
+    <None Include="res\values-v11\styles.xml" />
+    <None Include="res\values-v14\styles.xml" />
+    <None Include="res\values\styles.xml" />
+    <None Include="res\xml\backup_rules.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Engine\Common\Basic\Basic.vcxproj">
+      <Project>{c9caad8b-09b4-4024-98ef-ea37bad03307}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Common\Engine\Engine.vcxproj">
+      <Project>{93e56eeb-be06-4cde-873b-91fe6d327e7c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Common\Utility\Utility.vcxproj">
+      <Project>{4cba8ad5-4acb-4f66-a071-54096453fec8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Libraries\LeggieroLib\Leggiero.Library.vcxproj">
+      <Project>{2226291f-187f-4271-8471-4cd82481388b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Application\Application.vcxproj">
+      <Project>{70175146-5185-4b37-99e8-8911d1d821dc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Crypto\Crypto.vcxproj">
+      <Project>{26d404c2-fea8-4a3c-bc9b-86da067a1391}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\FileSystem\FileSystem.vcxproj">
+      <Project>{04917b6a-9f26-452a-b131-3147e00641be}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Font\Font.vcxproj">
+      <Project>{eb24a7dd-969e-498b-8d9a-f94f81464ae8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Graphics\Graphics.vcxproj">
+      <Project>{557f2323-e052-4a9b-aa66-95840ea11ae6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\HTTP\HTTP.vcxproj">
+      <Project>{b7253a66-56f6-4fc3-9ae3-35072741f71c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Input\Input.vcxproj">
+      <Project>{72380fcf-954d-4f2e-a4e3-77ed113bab66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Log\Log.vcxproj">
+      <Project>{5d9020d2-24c6-49cc-ab3c-81206ec2f179}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\LUI\LegacyUI.vcxproj">
+      <Project>{0aec3b63-b2f9-4a41-811e-3ae8dc18b9e0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Sound\Sound.vcxproj">
+      <Project>{333e51fd-1b8b-4502-8176-16bd5d3f9b2f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Modules\Task\Task.vcxproj">
+      <Project>{9e5c64b3-4b11-4341-bf52-16c8d75ad61e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Engine\Platform\Platform.Android\Platform.Android.vcxproj">
+      <Project>{ea3e544f-e838-4a0a-8a72-c2ba4dddc565}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\${{ProgramName}}\${{ProgramName}}.vcxproj">
+      <Project>{${{GUID-GameProject:L}}}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="${{ProgramName}}AndroidSetting.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

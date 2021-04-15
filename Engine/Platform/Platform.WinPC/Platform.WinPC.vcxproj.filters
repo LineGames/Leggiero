@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Window\Window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\WindowMessage.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="WinPCPlatformApplication.cpp" />
+    <ClCompile Include="WinPCApplicationComponent.cpp" />
+    <ClCompile Include="WinPCPlatformApplication_Touch.cpp" />
+    <ClCompile Include="WindowsUtility.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\WinTextInputDialog.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\WinWebView.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL\EGLView.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL\WinPCGLException.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL\WinPCGLThreadContext.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Embeded Resources">
+      <UniqueIdentifier>{6bd2bb98-c276-48e8-81b5-a3af32e65aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{678bb11d-59b0-4b60-a4f3-5e229205f0b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{9be2ee80-c9c7-4fa3-89ce-7e8582cae4af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{6739364f-4748-4f4d-83f2-90c993f5b79c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{d82e3601-1e72-436c-9731-531fbdd38ac3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Platform.WinPC.rc">
+      <Filter>Embeded Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Embeded Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsCommon.h" />
+    <ClInclude Include="Window\Window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WindowEventObserver.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WindowMessage.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WindowCreateParam.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\WindowException.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="WinPCPlatformApplication.h" />
+    <ClInclude Include="WindowsUtility.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\WinTextInputDialog.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\WinWebView.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL\EGLView.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL\WinPCGLException.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL\WinPCGLThreadContext.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="NsightTegraProject">
+    <NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AArch64-Android-NVIDIA">
+      <Configuration>Debug</Configuration>
+      <Platform>AArch64-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM-Android-NVIDIA">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Tegra-Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AArch64-Android-NVIDIA">
+      <Configuration>Release</Configuration>
+      <Platform>AArch64-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM-Android-NVIDIA">
+      <Configuration>Release</Configuration>
+      <Platform>ARM-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Tegra-Android">
+      <Configuration>Release</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|AArch64-Android-NVIDIA">
+      <Configuration>Shipping</Configuration>
+      <Platform>AArch64-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|ARM-Android-NVIDIA">
+      <Configuration>Shipping</Configuration>
+      <Platform>ARM-Android-NVIDIA</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|Tegra-Android">
+      <Configuration>Shipping</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0aec3b63-b2f9-4a41-811e-3ae8dc18b9e0}</ProjectGuid>
+    <RootNamespace>LegMod.LUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM-Android-NVIDIA'">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AArch64-Android-NVIDIA'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+    <AndroidArch>multiple</AndroidArch>
+    <PlatformsToPackage>ARM;AArch64</PlatformsToPackage>
+    <AndroidNativeAPI>UseMin</AndroidNativeAPI>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|ARM-Android-NVIDIA'">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|ARM-Android-NVIDIA'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AArch64-Android-NVIDIA'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|AArch64-Android-NVIDIA'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+    <AndroidArch>multiple</AndroidArch>
+    <PlatformsToPackage>ARM;AArch64</PlatformsToPackage>
+    <AndroidNativeAPI>UseMin</AndroidNativeAPI>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <AndroidMinAPI>android-21</AndroidMinAPI>
+    <AndroidTargetAPI>android-28</AndroidTargetAPI>
+    <NdkToolchainVersion>clang-7.0</NdkToolchainVersion>
+    <AndroidArch>multiple</AndroidArch>
+    <PlatformsToPackage>ARM;AArch64</PlatformsToPackage>
+    <AndroidNativeAPI>UseMin</AndroidNativeAPI>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>LM$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>LM$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AArch64-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|ARM-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AArch64-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|AArch64-Android-NVIDIA'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <OutDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\</OutDir>
+    <IntDir>$(SolutionDir).Build\$(Platform)\$(Configuration)\Intermediate\Mod.$(ProjectName)\</IntDir>
+    <TargetName>libLEM_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\pthreads4w\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\PowerVR\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\OpenALSoft\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.WinPC\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\pthreads4w\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\PowerVR\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\OpenALSoft\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Win-x64\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.WinPC\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM-Android-NVIDIA'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Android\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\oboe\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.Android\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AArch64-Android-NVIDIA'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Android\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\oboe\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.Android\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM-Android-NVIDIA'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Android\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\oboe\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.Android\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|ARM-Android-NVIDIA'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Android\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\oboe\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.Android\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|AArch64-Android-NVIDIA'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Android\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\oboe\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.Android\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|AArch64-Android-NVIDIA'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Libraries\LeggieroLib\;$(ProjectDir)..\..\Libraries\Dependent\Android\libjpeg-turbo\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\FreeType\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\oboe\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libogg\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\libvorbis\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\OpenSSL\include\;$(ProjectDir)..\..\Libraries\Dependent\Android\curl\include\;$(ProjectDir)..\..\Common\;$(ProjectDir)..\..\Platform\Platform.Android\;$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <ClCompile>
+      <GccExceptionHandling>true</GccExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\IUIArea.cpp" />
+    <ClCompile Include="Common\UICommonArea.cpp" />
+    <ClCompile Include="Common\UICommonResources.cpp" />
+    <ClCompile Include="Common\UITransform.cpp" />
+    <ClCompile Include="Component\UIClippingComponent.cpp" />
+    <ClCompile Include="Component\UILayoutComponent.cpp" />
+    <ClCompile Include="Component\UISizeSubComponent.cpp" />
+    <ClCompile Include="Component\UITransformComponent.cpp" />
+    <ClCompile Include="Controller\CommonButtonRenderingController.cpp" />
+    <ClCompile Include="Controller\CommonControllerDefines.cpp" />
+    <ClCompile Include="Controller\OnOffButtonController.cpp" />
+    <ClCompile Include="Controller\SimpleSliderRenderingController.cpp" />
+    <ClCompile Include="Controller\TextInputBoxRenderingController.cpp" />
+    <ClCompile Include="Description\UIDescription.cpp" />
+    <ClCompile Include="Description\UIDescriptionColor.cpp" />
+    <ClCompile Include="Description\UIDescriptionCommonExpression.cpp" />
+    <ClCompile Include="Description\UIDescriptionExpression.cpp" />
+    <ClCompile Include="Description\UIDescriptionFont.cpp" />
+    <ClCompile Include="Description\UIDescriptionManager.cpp" />
+    <ClCompile Include="Description\UIDescriptionParserUtility.cpp" />
+    <ClCompile Include="Description\UIDescriptionProcessingContext.cpp" />
+    <ClCompile Include="Description\UIDescriptionReader.cpp" />
+    <ClCompile Include="Description\UIDescriptionSourcedString.cpp" />
+    <ClCompile Include="Description\UIDescriptionSystemUnit.cpp" />
+    <ClCompile Include="Description\UIDescriptionTexture.cpp" />
+    <ClCompile Include="Description\UIDescriptionTypes.cpp" />
+    <ClCompile Include="Description\UIDescriptionUnit.cpp" />
+    <ClCompile Include="Description\UIPrefabDescription.cpp" />
+    <ClCompile Include="Description\UIPrefabDescription_Reader.cpp" />
+    <ClCompile Include="Element\UIElementBlurredBarrier.cpp" />
+    <ClCompile Include="Element\UIElementCachedVariantText.cpp" />
+    <ClCompile Include="Element\UIElementCancelPanelArea.cpp" />
+    <ClCompile Include="Element\UIElementFixedText.cpp" />
+    <ClCompile Include="Element\UIElementSimpleHorizontalScrollPanel.cpp" />
+    <ClCompile Include="Element\UIElementSimpleSlideBar.cpp" />
+    <ClCompile Include="Element\UIElementSimpleVerticalScrollPanel.cpp" />
+    <ClCompile Include="Element\UIElementSingleSimpleButton.cpp" />
+    <ClCompile Include="Element\UIElementSlideBar.cpp" />
+    <ClCompile Include="Element\UIElementTestButton.cpp" />
+    <ClCompile Include="Element\UIElementTextInputBox.cpp" />
+    <ClCompile Include="Element\UIElementVariantText.cpp" />
+    <ClCompile Include="Loader\DummyUIAssetLoader.cpp" />
+    <ClCompile Include="Loader\UIBundleAssetLoader.cpp" />
+    <ClCompile Include="Loader\UIChainAssetLoader.cpp" />
+    <ClCompile Include="Loader\UIFileAssetLoader.cpp" />
+    <ClCompile Include="Loader\UITableAssetLoader.cpp" />
+    <ClCompile Include="Prefab\UIComponentPrefab.cpp" />
+    <ClCompile Include="Prefab\UIFabricatedComponent.cpp" />
+    <ClCompile Include="Prefab\UILayoutComponentPrefab.cpp" />
+    <ClCompile Include="Prefab\UIObjectButtonPrefab.cpp" />
+    <ClCompile Include="Prefab\UIObjectPrefab.cpp" />
+    <ClCompile Include="Prefab\UIObjectScrollPanelPrefab.cpp" />
+    <ClCompile Include="Prefab\UIObjectSliderPrefab.cpp" />
+    <ClCompile Include="Prefab\UIPatchedTextureRenderingComponentPrefab.cpp" />
+    <ClCompile Include="Prefab\UIPrefabCommonObjects.cpp" />
+    <ClCompile Include="Prefab\UIShapeRenderingComponentPrefab.cpp" />
+    <ClCompile Include="Prefab\UITextInputBoxPrefab.cpp" />
+    <ClCompile Include="Prefab\UITextObjectPrefab.cpp" />
+    <ClCompile Include="Prefab\UITextureRenderingComponentPrefab.cpp" />
+    <ClCompile Include="Prefab\UITransformComponentPrefab.cpp" />
+    <ClCompile Include="Rendering\CachedTextRenderingComponent.cpp" />
+    <ClCompile Include="Rendering\PatchedTextureRenderingComponent.cpp" />
+    <ClCompile Include="Rendering\ShapeSetRenderingComponent.cpp" />
+    <ClCompile Include="Rendering\TextRenderingComponent.cpp" />
+    <ClCompile Include="Rendering\TextureRenderingComponent.cpp" />
+    <ClCompile Include="Rendering\UIClipping.cpp" />
+    <ClCompile Include="Rendering\UIFontFaceManager.cpp" />
+    <ClCompile Include="Rendering\UIRenderer.cpp" />
+    <ClCompile Include="Rendering\UIShaders.cpp" />
+    <ClCompile Include="Rendering\UIShaders_Shader.cpp" />
+    <ClCompile Include="Rendering\UIShapeRect.cpp" />
+    <ClCompile Include="Rendering\UITextureManager.cpp" />
+    <ClCompile Include="Scene\UISceneBase.cpp" />
+    <ClCompile Include="Touch\UITouch.cpp" />
+    <ClCompile Include="Touch\UITouchComponent.cpp" />
+    <ClCompile Include="Touch\UITouchNegotiator.cpp" />
+    <ClCompile Include="Touch\ValuedTouchComponent.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="UIObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\IUIArea.h" />
+    <ClInclude Include="Common\UICommonArea.h" />
+    <ClInclude Include="Common\UICommonResources.h" />
+    <ClInclude Include="Common\UICommonTypes.h" />
+    <ClInclude Include="Common\UISizeSettable.h" />
+    <ClInclude Include="Common\UITransform.h" />
+    <ClInclude Include="Component\IUIComponent.h" />
+    <ClInclude Include="Component\UIClippingComponent.h" />
+    <ClInclude Include="Component\UIComponentType.h" />
+    <ClInclude Include="Component\UILayoutComponent.h" />
+    <ClInclude Include="Component\UISizeSubComponent.h" />
+    <ClInclude Include="Component\UITransformComponent.h" />
+    <ClInclude Include="Controller\CommonButtonRenderingController.h" />
+    <ClInclude Include="Controller\CommonControllerDefines.h" />
+    <ClInclude Include="Controller\OnOffButtonController.h" />
+    <ClInclude Include="Controller\SimpleSliderRenderingController.h" />
+    <ClInclude Include="Controller\TextInputBoxRenderingController.h" />
+    <ClInclude Include="Description\UIDescription.h" />
+    <ClInclude Include="Description\UIDescriptionColor.h" />
+    <ClInclude Include="Description\UIDescriptionCommonExpression.h" />
+    <ClInclude Include="Description\UIDescriptionExpression.h" />
+    <ClInclude Include="Description\UIDescriptionExpression_Nodes.h" />
+    <ClInclude Include="Description\UIDescriptionFont.h" />
+    <ClInclude Include="Description\UIDescriptionManager.h" />
+    <ClInclude Include="Description\UIDescriptionParserUtility.h" />
+    <ClInclude Include="Description\UIDescriptionProcessingContext.h" />
+    <ClInclude Include="Description\UIDescriptionReader.h" />
+    <ClInclude Include="Description\UIDescriptionSourcedString.h" />
+    <ClInclude Include="Description\UIDescriptionSystemUnit.h" />
+    <ClInclude Include="Description\UIDescriptionTexture.h" />
+    <ClInclude Include="Description\UIDescriptionTypes.h" />
+    <ClInclude Include="Description\UIDescriptionUnit.h" />
+    <ClInclude Include="Description\UIPrefabDescription.h" />
+    <ClInclude Include="Description\UIPrefabDescription_Reader.h" />
+    <ClInclude Include="Element\UIElementBlurredBarrier.h" />
+    <ClInclude Include="Element\UIElementCachedVariantText.h" />
+    <ClInclude Include="Element\UIElementCancelPanelArea.h" />
+    <ClInclude Include="Element\UIElementFixedText.h" />
+    <ClInclude Include="Element\UIElementSimpleHorizontalScrollPanel.h" />
+    <ClInclude Include="Element\UIElementSimpleSlideBar.h" />
+    <ClInclude Include="Element\UIElementSimpleVerticalScrollPanel.h" />
+    <ClInclude Include="Element\UIElementSingleSimpleButton.h" />
+    <ClInclude Include="Element\UIElementSlideBar.h" />
+    <ClInclude Include="Element\UIElementTestButton.h" />
+    <ClInclude Include="Element\UIElementTextInputBox.h" />
+    <ClInclude Include="Element\UIElementVariantText.h" />
+    <ClInclude Include="Loader\DummyUIAssetLoader.h" />
+    <ClInclude Include="Loader\IUIAssetLoader.h" />
+    <ClInclude Include="Loader\UIBundleAssetLoader.h" />
+    <ClInclude Include="Loader\UIChainAssetLoader.h" />
+    <ClInclude Include="Loader\UIFileAssetLoader.h" />
+    <ClInclude Include="Loader\UITableAssetLoader.h" />
+    <ClInclude Include="Prefab\UIComponentPrefab.h" />
+    <ClInclude Include="Prefab\UIFabricatedComponent.h" />
+    <ClInclude Include="Prefab\UILayoutComponentPrefab.h" />
+    <ClInclude Include="Prefab\UIObjectButtonPrefab.h" />
+    <ClInclude Include="Prefab\UIObjectPrefab.h" />
+    <ClInclude Include="Prefab\UIObjectScrollPanelPrefab.h" />
+    <ClInclude Include="Prefab\UIObjectSliderPrefab.h" />
+    <ClInclude Include="Prefab\UIPatchedTextureRenderingComponentPrefab.h" />
+    <ClInclude Include="Prefab\UIPrefabCommonObjects.h" />
+    <ClInclude Include="Prefab\UIPrefabPlaceProcessor.h" />
+    <ClInclude Include="Prefab\UIShapeRenderingComponentPrefab.h" />
+    <ClInclude Include="Prefab\UITextInputBoxPrefab.h" />
+    <ClInclude Include="Prefab\UITextObjectPrefab.h" />
+    <ClInclude Include="Prefab\UITextureRenderingComponentPrefab.h" />
+    <ClInclude Include="Prefab\UITransformComponentPrefab.h" />
+    <ClInclude Include="Rendering\CachedTextRenderingComponent.h" />
+    <ClInclude Include="Rendering\IUIRenderingShape.h" />
+    <ClInclude Include="Rendering\PatchedTextureRenderingComponent.h" />
+    <ClInclude Include="Rendering\ShapeSetRenderingComponent.h" />
+    <ClInclude Include="Rendering\TextRenderingComponent.h" />
+    <ClInclude Include="Rendering\TextureRenderingComponent.h" />
+    <ClInclude Include="Rendering\UIClipping.h" />
+    <ClInclude Include="Rendering\UIFontFaceManager.h" />
+    <ClInclude Include="Rendering\UIRenderer.h" />
+    <ClInclude Include="Rendering\UIRenderingComponent.h" />
+    <ClInclude Include="Rendering\UIRenderingUtility.h" />
+    <ClInclude Include="Rendering\UIShaders.h" />
+    <ClInclude Include="Rendering\UIShapeRect.h" />
+    <ClInclude Include="Rendering\UITexture.h" />
+    <ClInclude Include="Rendering\UITextureManager.h" />
+    <ClInclude Include="Scene\UISceneBase.h" />
+    <ClInclude Include="Touch\UITouch.h" />
+    <ClInclude Include="Touch\UITouchComponent.h" />
+    <ClInclude Include="Touch\UITouchNegotiator.h" />
+    <ClInclude Include="Touch\ValuedTouchComponent.h" />
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="UIObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Description\UIDescriptionExpression_CastEvaluation.inl" />
+    <None Include="Description\UIDescriptionExpression_CastValue.inl" />
+    <None Include="Description\UIDescriptionExpression_NodesEvaluation.inl" />
+    <None Include="Description\UIDescriptionExpression_Reader.inl" />
+    <None Include="Description\UIDescriptionVariable_ValueGetter.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

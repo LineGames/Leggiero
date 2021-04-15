@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="WinPCMain.cpp" />
+    <ClCompile Include="${{ProgramName}}WinPCSetting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="${{ProgramName}}WinPCSetting.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="${{ProgramName}}.WinPC.rc" />
+    <ResourceCompile Include="..\..\..\..\Engine\Platform\Platform.WinPC\Platform.WinPC.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Library">
+      <UniqueIdentifier>{850d6d85-ad13-4a7c-b51a-db22bf25b18b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\pthreads4w\libs\pthreadVCE3.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\pthreads4w\libs\pthreadVCE3d.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\PowerVR\libs\libEGL.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\PowerVR\libs\libGLESv2.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="WinPath_Binary.xml" />
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\curl\bin\libcurl-x64.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Debug\libssl-1_1-x64.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Release\libssl-1_1-x64.dll">
+      <Filter>Library</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Debug\libcrypto-1_1-x64.dll" />
+    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Release\libcrypto-1_1-x64.dll" />
+  </ItemGroup>
+</Project>

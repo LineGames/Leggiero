@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WinPCPath>
+	<Bundle root="..\..\..\Bundle\" base="Base\" platform="Platform\WinPC\" />
+	
+	<MainData internal="Run\FileSys\Main\Int\" external="Run\FileSys\Main\Ext\" />
+	<RawData internal="Run\FileSys\Raw\Int\" external="Run\FileSys\Raw\Ext\" />
+	<Cache internal="Run\FileSys\Cache\Int\" external="Run\FileSys\Cache\Ext\" />
+	<Temp root="Run\FileSys\Temp\" />
+</WinPCPath>

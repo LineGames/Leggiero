@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GraphicsModuleInterface.cpp" />
+    <ClCompile Include="_Internal\_GraphicsModuleInternalState.cpp">
+      <Filter>_Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GraphicsReferenceState.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GLColor.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GLFrameBufferBindContext.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\GLTextureResource.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureHelper.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureSection.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\GLTextureResource_Creation.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicResourceManagerComponent.cpp" />
+    <ClCompile Include="Shader\GLShaderProgramResource.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\GLShaderProgramResource_Creation.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\GLVertexAttribEnabledContext.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\CommonBaseShaderProgram.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Basic\ColorSimpleShader.cpp">
+      <Filter>Shader\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Basic\ColorSimpleShader_Shader.cpp">
+      <Filter>Shader\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\ProgramManager.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureCommitter.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Basic\TexturedColorSimpleShader.cpp">
+      <Filter>Shader\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Basic\TexturedColorSimpleShader_Shader.cpp">
+      <Filter>Shader\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\DynamicTextureResource.cpp">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\DynamicTextureResource_Creation.cpp">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\RenderTargetTextureResource.cpp">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\RenderTargetTextureResource_Creation.cpp">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\RuntimeTextureAtlas.cpp">
+      <Filter>Texture\RuntimeAtlas</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\RuntimeTextureAtlasEntry.cpp">
+      <Filter>Texture\RuntimeAtlas</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\RuntimeTextureAtlasManager.cpp">
+      <Filter>Texture\RuntimeAtlas</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\ImageFormatType.cpp">
+      <Filter>Texture\ImageTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureHelper_JPEG.cpp">
+      <Filter>Texture\ImageTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureHelper_Loader.cpp">
+      <Filter>Texture\ImageTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureHelper_PNG.cpp">
+      <Filter>Texture\ImageTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureManager.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureAtlasTable.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GraphicsModuleInterface.h" />
+    <ClInclude Include="_Internal\_GraphicsModuleInternalState.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="_Internal\_InternalInitializer.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsThreadContext.h" />
+    <ClInclude Include="Common\GraphicsReferenceState.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GraphicsTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="_Internal\_InternalUpdater.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GLColor.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\IGLGraphicResource.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GLFrameBufferBindContext.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\GLTextureResource.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\TextureHelper.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\TextureSection.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="_Internal\_DummyInterfaces.h">
+      <Filter>_Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicResourceManagerComponent.h" />
+    <ClInclude Include="Texture\TextureManager.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\GLShaderProgramResource.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\IGLProgramStateEventObserver.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\GLVertexAttribEnabledContext.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\CommonGLVertexType.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\CommonBaseShaderProgram.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\TexturedShaderProgram.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\Basic\ColorSimpleShader.h">
+      <Filter>Shader\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ProgramManager.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\TextureCommitter.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\Basic\TexturedColorSimpleShader.h">
+      <Filter>Shader\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\DynamicTextureResource.h">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\DynamicTextureRestore.h">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\RenderTargetTextureResource.h">
+      <Filter>Texture\SpecialTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\RuntimeTextureAtlas.h">
+      <Filter>Texture\RuntimeAtlas</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\RuntimeTextureAtlasEntry.h">
+      <Filter>Texture\RuntimeAtlas</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\RuntimeTextureAtlasManager.h">
+      <Filter>Texture\RuntimeAtlas</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\ImageFormatType.h">
+      <Filter>Texture\ImageTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\TextureAtlasTable.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Internal">
+      <UniqueIdentifier>{2627ad86-f10d-4e01-b570-7f07c4be839e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e2b459ce-a5ab-4f3f-af5a-2bc9a1f4ae8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{e5a045ea-1625-4d54-b970-21c90bb09ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{f44f2435-386f-494d-8c46-cf02810ee796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\Basic">
+      <UniqueIdentifier>{5ecfefd9-ad77-4c87-a47e-aab1dfb41829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\SpecialTexture">
+      <UniqueIdentifier>{5bfed653-9731-4fb0-854b-2e29044279c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\RuntimeAtlas">
+      <UniqueIdentifier>{4032c11d-eb35-48d7-a458-6b278d1b3630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\ImageTexture">
+      <UniqueIdentifier>{ffc2762a-3446-4f57-b3ca-0a99e1751162}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

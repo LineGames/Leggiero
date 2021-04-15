@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Font Module &mdash; Leggiero  문서</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="Cryptography Module" href="49_mod_crypto.html" />
+    <link rel="prev" title="Task Module" href="47_mod_task.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Leggiero
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Leggiero</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="00_introduction.html#leggiero">Leggiero</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_dependency.html">Dependency</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#id1">Visual Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#ios">iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_dependency.html#other-dependencies">Other Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#engine-setup">Engine Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#build-and-try-legtoy">Build and try LegToy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#start-with-a-new-project">Start with a NEW project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_getting_started.html#notes-for-android-release-build">Notes for Android Release Build</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="18_changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-9-0-current">v0.9.0 (current)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="19_known_issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_concepts_and_architecture.html">Concept and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#a-bird-s-eye-view">A Bird’s-eye View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#technical-decision-background">Technical Decision Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#roadmap">Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21_concepts_and_architecture.html#personal-comment">Personal Comment</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="30_platforms.html">Platforms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="30_platforms.html#supported-platforms">Supported Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="30_platforms.html#comparison">Comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="31_platform_iOS.html">iOS Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#supporting-details">Supporting Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#development-environment">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="32_platform_Android.html">Android Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="32_platform_Android.html#supporting-details">Supporting Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="32_platform_Android.html#development-environment">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="32_platform_Android.html#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="33_platform_WinPC.html">Windows PC Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="33_platform_WinPC.html#development-environment">Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_platform_WinPC.html#libraries">Libraries</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="40_modules.html">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="40_modules.html#component-and-module-interface">Component and Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40_modules.html#game-creation">Game Creation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="41_mod_application.html">Application Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="41_mod_application.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="41_mod_application.html#application-component">Application Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="42_mod_filesystem.html">File System Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="42_mod_filesystem.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="42_mod_filesystem.html#bundle-file-resource-component">Bundle File Resource Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="42_mod_filesystem.html#file-system-path-component">File System Path Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="43_mod_graphics.html">Graphics Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="43_mod_graphics.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="43_mod_graphics.html#graphics-module-interface">Graphics Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="43_mod_graphics.html#graphic-resource-manager-component">Graphic Resource Manager Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="44_mod_input.html">Input Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="44_mod_input.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="44_mod_input.html#touch-input-component">Touch Input Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="45_mod_sound.html">Sound Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#sound-provider">Sound Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#sound-mixer-component">Sound Mixer Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="45_mod_sound.html#bgm-player-component">BGM Player Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="46_mod_log.html">Log Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="46_mod_log.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="46_mod_log.html#logger-and-log-writer">Logger and Log Writer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="46_mod_log.html#log-module-interface">Log Module Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="47_mod_task.html">Task Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="47_mod_task.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="47_mod_task.html#task-manager-component">Task Manager Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Font Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#font-module-interface">Font Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glyph-manager-component">Glyph Manager Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="49_mod_crypto.html">Cryptography Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="49_mod_crypto.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="49_mod_crypto.html#cryptography-module-interface">Cryptography Module Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="50_mod_http.html">HTTP Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="50_mod_http.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="50_mod_http.html#http-module-interface">HTTP Module Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="50_mod_http.html#async-http-component">Async HTTP Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="51_mod_legacyui.html">Legacy UI Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#module-common-information">Module Common Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#basic-concepts-and-ui-object">Basic Concepts and UI Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#ui-manager">UI Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#ui-scene-base">UI Scene Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="51_mod_legacyui.html#ui-description">UI Description</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="80_tools.html">Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="80_tools.html#project-creator">Project Creator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="91_license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="91_license.html#leggiero">Leggiero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="91_license.html#libraries">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="91_license.html#legtoy">LegToy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="92_library_usage.html">Library Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="92_library_usage.html#leggiero">Leggiero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="92_library_usage.html#legtoy">LegToy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="93_acknowledgement.html">Acknowledgement</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Leggiero</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Font Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docs/48_mod_font.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="font-module">
+<h1>Font Module<a class="headerlink" href="#font-module" title="제목 주소">¶</a></h1>
+<p>Font 모듈은 글꼴을 처리하여 글씨의 그림을 얻어내고, 글월을 조판하기 위해 쓰여집니다.</p>
+<div class="section" id="module-common-information">
+<h2>Module Common Information<a class="headerlink" href="#module-common-information" title="제목 주소">¶</a></h2>
+<p><strong>Project:</strong> <em>Modules/Font</em></p>
+<p><strong>Namespace:</strong> <code class="docutils literal notranslate"><span class="pre">Leggiero::Font</span></code></p>
+<div class="section" id="module-interfaces">
+<h3>Module Interfaces<a class="headerlink" href="#module-interfaces" title="제목 주소">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#font-module-interface">Font Module Interface</a></p></li>
+</ul>
+</div>
+<div class="section" id="components">
+<h3>Components<a class="headerlink" href="#components" title="제목 주소">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#glyph-manager-component">Glyph Manager Component</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="font-module-interface">
+<h2>Font Module Interface<a class="headerlink" href="#font-module-interface" title="제목 주소">¶</a></h2>
+<p>Font 모듈에 대한 인터페이스를 제공합니다.</p>
+<p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">Leggiero::Font::FontModule</span></code></p>
+<p><strong>Module Id:</strong> <code class="docutils literal notranslate"><span class="pre">EngineModuleIdType::kFont</span></code> (220)</p>
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="제목 주소">¶</a></h3>
+<p>(없음)</p>
+</div>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="제목 주소">¶</a></h3>
+<p>Font 모듈 안에서 글씨의 그리기에 쓰는 FreeType2 모음함수의 안쪽 상태를 초기화하거나 정리합니다.</p>
+<div class="admonition note">
+<p class="admonition-title">참고</p>
+<p>Leggiero에서는 글씨의 그리기에 FreeType을 쓰고 있지만, 별도의 유니코드용 배치 모음함수를 쓰고 있지 않습니다. GSUB/GPOS 정보를 이용하는 อักษรไทย 같은 글씨는 바르게 그려지지 않을 수 있습니다.</p>
+</div>
+</div>
+<div class="section" id="load-a-font">
+<h3>Load a Font<a class="headerlink" href="#load-a-font" title="제목 주소">¶</a></h3>
+<p>Font 모듈이 초기화 된 후, 글꼴을 불러올 수 있습니다.</p>
+<p><em>FreeType/FreeTypeFontFace.h</em> 에 있는 함수들로 FreeType 모음함수를 써서 글꼴을 불러와 쓸 수 있습니다.</p>
+</div>
+<div class="section" id="typesetting">
+<h3>Typesetting<a class="headerlink" href="#typesetting" title="제목 주소">¶</a></h3>
+<p>FreeType2 모음함수를 이용해 글월의 간단한 조판도 할 수 있습니다.</p>
+<p><em>Common/Typeset.h</em> 에서 조판을 하기 위한 함수를 보실 수 있습니다.</p>
+</div>
+</div>
+<div class="section" id="glyph-manager-component">
+<h2>Glyph Manager Component<a class="headerlink" href="#glyph-manager-component" title="제목 주소">¶</a></h2>
+<p>글씨 그림을 그리고, 갖고 있을 수 있는 엔진 컴퍼넌트입니다.</p>
+<p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">Leggiero::Font::GlyphManagerComponent</span></code></p>
+<p><strong>Component Id:</strong> <code class="docutils literal notranslate"><span class="pre">EngineComponentIdType::kGlyphManager</span></code> (221)</p>
+<div class="section" id="id1">
+<h3>Dependencies<a class="headerlink" href="#id1" title="제목 주소">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="43_mod_graphics.html">Graphic Resource Manager Component</a></p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Overview<a class="headerlink" href="#id2" title="제목 주소">¶</a></h3>
+<p>주어진 글꼴에 맞춰 원하는 글씨의 그림을 그려 OpenGL ES의 질감으로써 쓸 수 있게 해 줍니다.
+매번 다시 그리지 않아도 되도록, 한 번 그린 글씨의 그림은 가지고 있습니다.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="49_mod_crypto.html" class="btn btn-neutral float-right" title="Cryptography Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="47_mod_task.html" class="btn btn-neutral float-left" title="Task Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 저작권 2021, Kim, Young Soo
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

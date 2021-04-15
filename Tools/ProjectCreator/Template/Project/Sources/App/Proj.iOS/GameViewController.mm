@@ -1,0 +1,21 @@
+////////////////////////////////////////////////////////////////////////////////
+// GameViewController.mm (${{ProgramName}} - iOS)
+//
+// Game View Controller Implementation
+////////////////////////////////////////////////////////////////////////////////
+
+#import "GameViewController.h"
+
+
+@implementation GameViewController
+{
+    
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+@end
