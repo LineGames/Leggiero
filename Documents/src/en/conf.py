@@ -18,7 +18,7 @@ extensions = [
 
 templates_path = []
 
-language = 'ko'
+language = 'en'
 
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
