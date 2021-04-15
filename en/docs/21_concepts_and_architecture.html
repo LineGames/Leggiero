@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="ko" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Concept and Architecture &mdash; Leggiero  문서</title>
+  <title>Concept and Architecture &mdash; Leggiero  documentation</title>
   
 
   
@@ -29,13 +29,12 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="색인" href="../genindex.html" />
-    <link rel="search" title="검색" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Platforms" href="30_platforms.html" />
     <link rel="prev" title="Known Issues" href="19_known_issues.html" /> 
 </head>
@@ -229,11 +228,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="concept-and-architecture">
-<h1>Concept and Architecture<a class="headerlink" href="#concept-and-architecture" title="제목 주소">¶</a></h1>
+<h1>Concept and Architecture<a class="headerlink" href="#concept-and-architecture" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-bird-s-eye-view">
-<h2>A Bird’s-eye View<a class="headerlink" href="#a-bird-s-eye-view" title="제목 주소">¶</a></h2>
+<h2>A Bird’s-eye View<a class="headerlink" href="#a-bird-s-eye-view" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="overall-architecture">
-<h3>Overall Architecture<a class="headerlink" href="#overall-architecture" title="제목 주소">¶</a></h3>
+<h3>Overall Architecture<a class="headerlink" href="#overall-architecture" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/overall_arch.png"><img alt="Overall architecture diagram" src="../_images/overall_arch.png" style="width: 800px;" /></a>
 <p>Leggiero engine abstracts each concrete platforms. Engine modules of Leggiero provides functions of platform functions, graphics and sound API, and other C++ library functions as easy-to-use abstract form.</p>
 <p>Leggiero engine itself and projects using Leggiero are mainly developed in C++ language, hence plenty open source libraries are available to use. Leggiero engine embeds several open source libraries and some of modules are wrapping those libraries.</p>
@@ -242,13 +241,13 @@
 Leggiero was orignally developed for a game &lt;Protocol:hyperspace Diver&gt;, and we call it 'engine' to contrast with real 'game codes'. But you can call it whatever you want.</p>
 </div>
 <div class="section" id="common-parts">
-<h3>Common Parts<a class="headerlink" href="#common-parts" title="제목 주소">¶</a></h3>
+<h3>Common Parts<a class="headerlink" href="#common-parts" title="Permalink to this headline">¶</a></h3>
 <p><strong>Basic</strong> , <strong>Engine</strong> , <strong>Utility</strong> projects provides engine's the most basic, independent stuffs.
 <strong>Basic</strong> library provides global types and compiler setting, and <strong>Utility</strong> library contains tools just above from language level.</p>
 <p><strong>Engine</strong> library defines common base structures for the game. It also provides a <em>Toolbox</em> for moduled game structure and commonly using Scene structure.</p>
 </div>
 <div class="section" id="moduled-engine">
-<h3>Moduled Engine<a class="headerlink" href="#moduled-engine" title="제목 주소">¶</a></h3>
+<h3>Moduled Engine<a class="headerlink" href="#moduled-engine" title="Permalink to this headline">¶</a></h3>
 <p>Leggiero is designed for moduled structure. Like following code in <em>CreateGame.cpp</em> file, the engine is 'assembled' from engine modules at the starting:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">//------------------------------------------------------------------------------</span>
 <span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">_InitializeUsingModules</span><span class="p">(</span><span class="n">Leggiero</span><span class="o">::</span><span class="n">IPlatformApplication</span> <span class="o">*</span><span class="n">application</span><span class="p">)</span>
@@ -283,7 +282,7 @@ Leggiero was orignally developed for a game &lt;Protocol:hyperspace Diver&gt;, a
 </div>
 </div>
 <div class="section" id="roadmap">
-<h2>Roadmap<a class="headerlink" href="#roadmap" title="제목 주소">¶</a></h2>
+<h2>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h2>
 <p>Leggiero is developed for a finished game development project, and currently not actively developing.
 We have no plan for major updates, although we will accept PRs and deal with some bug issues.</p>
 <p>If some development roadmap established, we will announce it in this document or in the GitHub repository.</p>
@@ -311,7 +310,7 @@ We have no plan for major updates, although we will accept PRs and deal with som
   <div role="contentinfo">
     <p>
         
-        &copy; 저작권 2021, Kim, Young Soo
+        &copy; Copyright 2021, Kim, Young Soo
 
     </p>
   </div>

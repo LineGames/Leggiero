@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="ko" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; Leggiero  문서</title>
+  <title>Getting Started &mdash; Leggiero  documentation</title>
   
 
   
@@ -29,13 +29,12 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="색인" href="../genindex.html" />
-    <link rel="search" title="검색" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Changelog" href="18_changelog.html" />
     <link rel="prev" title="Dependency" href="10_dependency.html" /> 
 </head>
@@ -229,17 +228,17 @@
            <div itemprop="articleBody">
             
   <div class="section" id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="제목 주소">¶</a></h1>
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>This document is a getting started guide for game developlment with Leggiero engine.
 Before try the contents in this document, please set developlment environment as <a class="reference external" href="10_dependency.html">Dependency</a> document.</p>
 <div class="admonition attention">
-<p class="admonition-title">주의</p>
+<p class="admonition-title">Attention</p>
 <p>Opening the project solution in Visual Studio without Nsight Tegra, Visual Studio Edition can corrupt some project settings. We recommend to try following instructions after install all dependencies.</p>
 </div>
 <div class="section" id="engine-setup">
-<h2>Engine Setup<a class="headerlink" href="#engine-setup" title="제목 주소">¶</a></h2>
+<h2>Engine Setup<a class="headerlink" href="#engine-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="get-engine-source-code">
-<h3>Get Engine Source Code<a class="headerlink" href="#get-engine-source-code" title="제목 주소">¶</a></h3>
+<h3>Get Engine Source Code<a class="headerlink" href="#get-engine-source-code" title="Permalink to this headline">¶</a></h3>
 <p>The latest version of Leggiero engine source is available from GitHub repository:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/LineGames/Leggiero.git</span>
 </pre></div>
@@ -247,37 +246,37 @@ Before try the contents in this document, please set developlment environment as
 <p>You can also use another release, or checkout a branch you want.</p>
 <p>Put engine source code into where you want. There will be <em>Documents</em>, <em>Engine</em>, <em>Tools</em> sub-directories in the <strong>Engine Root</strong> directory.</p>
 <div class="admonition note">
-<p class="admonition-title">참고</p>
+<p class="admonition-title">Note</p>
 <p>Engine source is shared between game projects. Each project has their own project directory at the <strong>Engine Root</strong> directory.</p>
 </div>
 </div>
 <div class="section" id="get-engine-library-source-code">
-<h3>Get Engine Library Source Code<a class="headerlink" href="#get-engine-library-source-code" title="제목 주소">¶</a></h3>
+<h3>Get Engine Library Source Code<a class="headerlink" href="#get-engine-library-source-code" title="Permalink to this headline">¶</a></h3>
 <p>External libraries used by the engine is hosted in another repository for convenient version control.</p>
 <p>Please clone library codes in <em>Engine</em> sub-directory of engine code as following:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/LineGames/Leggiero-Library.git Libraries</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">참고</p>
+<p class="admonition-title">Note</p>
 <p>The location of engine library codes should be <em>Engine/Libraries</em> from engine root directory. Be aware of the name of directory which is different from the name of library repository.</p>
 </div>
 <p><em>Engine</em> sub-directory of engine root directory should have <em>Common</em>, <em>Libraries</em>, <em>Modules</em>, <em>Platform</em> directories as its children.</p>
 </div>
 <div class="section" id="do-i-need-to-build-engine">
-<h3>Do I need to build engine?<a class="headerlink" href="#do-i-need-to-build-engine" title="제목 주소">¶</a></h3>
+<h3>Do I need to build engine?<a class="headerlink" href="#do-i-need-to-build-engine" title="Permalink to this headline">¶</a></h3>
 <p>No. You don’t need to build engine code separately. Engine will be built with each game project.</p>
 </div>
 </div>
 <div class="section" id="build-and-try-legtoy">
-<h2>Build and try LegToy<a class="headerlink" href="#build-and-try-legtoy" title="제목 주소">¶</a></h2>
+<h2>Build and try LegToy<a class="headerlink" href="#build-and-try-legtoy" title="Permalink to this headline">¶</a></h2>
 <p>LegToy is an example project for Leggiero engine including demonstration for functions and usages.</p>
 <p>You can get source of LegToy project in the <strong>Engine Root Directory</strong> as:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/LineGames/LegToy.git</span>
 </pre></div>
 </div>
 <div class="section" id="winpc-and-android-app-build">
-<h3>WinPC and Android App Build<a class="headerlink" href="#winpc-and-android-app-build" title="제목 주소">¶</a></h3>
+<h3>WinPC and Android App Build<a class="headerlink" href="#winpc-and-android-app-build" title="Permalink to this headline">¶</a></h3>
 <p>Android and Windows PC application of LegToy can be built using Visual Studio.</p>
 <ul class="simple">
 <li><p>Open the solution file <strong>LegToy.sln</strong> in the <em>Project Folder of LegToy</em> .</p></li>
@@ -306,12 +305,12 @@ Before try the contents in this document, please set developlment environment as
 </li>
 </ul>
 <div class="admonition hint">
-<p class="admonition-title">힌트</p>
+<p class="admonition-title">Hint</p>
 <p>Build can fails if engine and project directory is in a folder having long path. It is suspected that OS's path length limit(about 260 characters) cause the error. We recommend to put engine and project in a folder with swallow path.</p>
 </div>
 </div>
 <div class="section" id="ios-app-build">
-<h3>iOS App Build<a class="headerlink" href="#ios-app-build" title="제목 주소">¶</a></h3>
+<h3>iOS App Build<a class="headerlink" href="#ios-app-build" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Open <strong>LegToy.xcodeproj</strong> project in <em>Project Folder of LegToy</em> with XCode.</p></li>
 <li><p>Select LegToy app for build target, and build it for a device platform you want.</p>
@@ -323,10 +322,10 @@ Before try the contents in this document, please set developlment environment as
 </div>
 </div>
 <div class="section" id="start-with-a-new-project">
-<h2>Start with a NEW project<a class="headerlink" href="#start-with-a-new-project" title="제목 주소">¶</a></h2>
+<h2>Start with a NEW project<a class="headerlink" href="#start-with-a-new-project" title="Permalink to this headline">¶</a></h2>
 <p>You can create a new project for Leggiero engine with Project Creator tool.</p>
 <div class="section" id="project-creator">
-<h3>Project Creator<a class="headerlink" href="#project-creator" title="제목 주소">¶</a></h3>
+<h3>Project Creator<a class="headerlink" href="#project-creator" title="Permalink to this headline">¶</a></h3>
 <p>There are prebuilt tool binaries <em>(requires .NET 5.0 runtime)</em> in <em>Tools/ProjectCreator</em> directory in the engine repository.</p>
 <ul class="simple">
 <li><p><strong>ProjectCreatorTool.exe</strong> is a command line tool for project creation.</p></li>
@@ -334,17 +333,17 @@ Before try the contents in this document, please set developlment environment as
 </ul>
 </div>
 <div class="section" id="create-a-project">
-<h3>Create a Project<a class="headerlink" href="#create-a-project" title="제목 주소">¶</a></h3>
+<h3>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h3>
 <p>You can set some properties for new project in Project Creator tool.</p>
 <p>The project directory of new project will be located in the <strong>Engine Root</strong> directory. You can build the new project using Visual Studio solution and XCode project in project directory.</p>
 <div class="admonition note">
-<p class="admonition-title">참고</p>
+<p class="admonition-title">Note</p>
 <p>Changing the relative path from the engine root directory and the project directory is NOT supported for now.</p>
 </div>
 </div>
 </div>
 <div class="section" id="notes-for-android-release-build">
-<h2>Notes for Android Release Build<a class="headerlink" href="#notes-for-android-release-build" title="제목 주소">¶</a></h2>
+<h2>Notes for Android Release Build<a class="headerlink" href="#notes-for-android-release-build" title="Permalink to this headline">¶</a></h2>
 <p>App Signning is needed to build and run Release APK or to distribute your app via stores.</p>
 <p>You can set a secure property file in project properties windows of LegToy.Android project for do signning in the build process. Set <strong>Secure Properties Location</strong> property under <span class="guilabel">Gradle Build</span> &gt; <span class="guilabel">General</span> in Tegra-Android platform.</p>
 </div>
@@ -371,7 +370,7 @@ Before try the contents in this document, please set developlment environment as
   <div role="contentinfo">
     <p>
         
-        &copy; 저작권 2021, Kim, Young Soo
+        &copy; Copyright 2021, Kim, Young Soo
 
     </p>
   </div>
