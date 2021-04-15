@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<full-backup-content>
-    <exclude domain="file" path="ldrawi" />
-    <exclude domain="file" path="ldrawe" />
-    <exclude domain="external" path="ldrawe" />
-</full-backup-content>
