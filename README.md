@@ -10,7 +10,7 @@ Leggiero adopts C++ as a common development language to support both iOS and And
 [한국어](https://linegames.github.io/Leggiero/kr/index.html)
 
 ## Related Repositories
-Third-pary libraries repository [Leggiero-Library](https://github.com/LineGames/Leggiero-Library)
+Third-party libraries repository [Leggiero-Library](https://github.com/LineGames/Leggiero-Library)
 
 An example project [LegToy](https://github.com/LineGames/LegToy)
 
