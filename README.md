@@ -1,7 +1,7 @@
 # Leggiero
 An open source game engine, or framework, for mobile games.
 
-Leggiero adopts C++ as a common development language to support both platforms, and is designed for a lightweight and thin engine with direct access for OpenGL ES APIs.
+Leggiero adopts C++ as a common development language to support both iOS and Android platforms, and is designed for a lightweight and thin engine with direct access for OpenGL ES APIs.
 
 
 ## Documentation
@@ -10,7 +10,7 @@ Leggiero adopts C++ as a common development language to support both platforms, 
 [한국어](https://linegames.github.io/Leggiero/kr/index.html)
 
 ## Related Repositories
-Third-pary libraries [Leggiero-Library](https://github.com/LineGames/Leggiero-Library)
+Third-pary libraries repository [Leggiero-Library](https://github.com/LineGames/Leggiero-Library)
 
 An example project [LegToy](https://github.com/LineGames/LegToy)
 
