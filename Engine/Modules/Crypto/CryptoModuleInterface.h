@@ -34,6 +34,8 @@ namespace Leggiero
 	}
 }
 
+LEGGIERO_DECLARE_SINGLETON_MEMBERS(Leggiero::Crypto::CryptoModule);
+
 
 DECLARE_GET_MODULE_INTERFACE(Leggiero::Crypto::CryptoModule, Leggiero::EngineModuleIdType::kCrypto);
 

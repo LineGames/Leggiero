@@ -111,6 +111,19 @@ private: \
 	CLASS_NAME& operator=(const CLASS_NAME& rhs) { return *this; } \
 	friend class Leggiero::Utility::DesignPattern::Singleton<CLASS_NAME>;
 
+#define LEGGIERO_DECLARE_SINGLETON_MEMBERS(CLASS_NAME) \
+namespace Leggiero \
+{ \
+	namespace Utility \
+	{ \
+		namespace DesignPattern \
+		{ \
+			template<> \
+			CLASS_NAME *Singleton<CLASS_NAME>::ms_instance; \
+		} \
+	} \
+}
+
 #define LEGGIERO_DEFINE_SINGLETON_MEMBERS(CLASS_NAME) \
 namespace Leggiero \
 { \

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.leggiero.${{ProgramName}}"
+      package="${{AppIdentifier}}"
       android:installLocation="auto"
       android:versionCode="100"
       android:versionName="0.1.0">
   
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="32" />
   
   <uses-feature android:glEsVersion="0x00030000" />
   <uses-feature android:required="false" android:name="android.hardware.telephony" />
@@ -24,7 +24,7 @@
                     android:xlargeScreens="true"/>
   
   <application android:name="com.leggiero.${{ProgramName}}.${{ProgramName}}Application"
-               android:hasCode="True"
+               android:hasCode="true"
                android:label="@string/app_name"
                android:icon="@drawable/ic_launcher"
                android:resizeableActivity="false"
@@ -40,7 +40,8 @@
               android:theme="@style/AppBaseTheme"
               android:configChanges="orientation|screenSize|keyboardHidden"
               android:launchMode="singleTask"
-              android:screenOrientation="${{Orientation-Android}}">
+              android:screenOrientation="${{Orientation-Android}}"
+              android:exported="true">
       
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

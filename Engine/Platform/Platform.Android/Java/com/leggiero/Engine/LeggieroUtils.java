@@ -32,11 +32,10 @@ public class LeggieroUtils {
 	//////////////////////////////////////////////////////////////////////////////// Library Utils
 
 	// Game Application Library Name
-	public final static String kApplicationLibraryName = LeggieroProjectSetting.kApplicationName_lower + "app_android";
+	public final static String kApplicationLibraryName = LeggieroProjectSetting.kApplicationName;
 
 	// Load Native Library
 	public static void LoadNativeLibraries() {
-		System.loadLibrary("c++_shared");
 		System.loadLibrary(LeggieroUtils.kApplicationLibraryName);
 	}
 

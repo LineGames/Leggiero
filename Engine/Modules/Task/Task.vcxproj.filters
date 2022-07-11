@@ -24,9 +24,6 @@
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="ConcreteTaskManager.cpp" />
-    <ClCompile Include="Platform\TaskPlatform_Android.cpp">
-      <Filter>Platform</Filter>
-    </ClCompile>
     <ClCompile Include="Tasks\DependentTask.cpp">
       <Filter>Tasks</Filter>
     </ClCompile>

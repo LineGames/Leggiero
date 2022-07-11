@@ -7,6 +7,10 @@
 // My Header
 #include "FileLogWriter.h"
 
+// Standard Library
+#define __STDC_FORMAT_MACROS
+#include <cinttypes>
+
 
 namespace Leggiero
 {
@@ -53,7 +57,7 @@ namespace Leggiero
 			int64_t timestamp = std::chrono::duration_cast<std::chrono::microseconds>(time.time_since_epoch()).count();
 			int64_t timestampPart = timestamp / 1000000;
 			int subtimestampPart = (int)(timestamp % 1000000);
-			fprintf(m_targetFile, "] (%lld.%06d) \t", timestampPart, subtimestampPart);
+			fprintf(m_targetFile, "] (%" PRId64 ".%06d) \t", timestampPart, subtimestampPart);
 
 			fwrite(logString.data(), sizeof(std::string_view::value_type), logString.length(), m_targetFile);
 			fputc('\n', m_targetFile);

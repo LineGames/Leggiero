@@ -26,4 +26,17 @@
 #endif
 
 
+// Common Utilites
+namespace Leggiero
+{
+	namespace Platform
+	{
+		namespace Android
+		{
+			int GetDeviceAndroidAPILevel();
+		}
+	}
+}
+
+
 #endif

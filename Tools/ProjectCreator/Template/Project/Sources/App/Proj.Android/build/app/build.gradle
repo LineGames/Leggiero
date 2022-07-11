@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "${{AppIdentifier}}"
+        minSdk 21
+        targetSdk 32
+        versionCode 100
+        versionName "0.1.0"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags '-fexceptions', '-frtti'
+                arguments '-DANDROID_STL=c++_shared'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        prefab true
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/java', '../../../../../Engine/Platform/Platform.Android/Java', '../../../../../Engine/Modules/FileSystem/Java', '../../../../../Engine/Modules/Sound/Java'
+            }
+            assets {
+                srcDirs '../../../../Bundle/Base', '../../../../Bundle/Platform/Android'
+            }
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = '../../../../../../../../Binary/Android/' + variant.name + '/${{ProgramName}}.apk'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.fragment:fragment:1.5.0'
+    implementation fileTree(dir: '../../../../../Engine/Libraries/Dependent/Android/libs', include: ['*.aar', '*.jar'], exclude: [])
+}

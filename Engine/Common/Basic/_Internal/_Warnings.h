@@ -23,6 +23,7 @@
 // Ignore Clang/GCC Warnings
 #if defined(__GNUC__) || defined(__clang__)
 #pragma GCC diagnostic ignored "-Wswitch"
+#pragma GCC diagnostic ignored "-Winstantiation-after-specialization"
 #endif
 
 #endif

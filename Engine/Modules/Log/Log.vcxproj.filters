@@ -13,9 +13,6 @@
       <Filter>Writers</Filter>
     </ClCompile>
     <ClCompile Include="DebugLogger.cpp" />
-    <ClCompile Include="PlatformDefaultLogWriter_Android.cpp">
-      <Filter>Writers</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Writers">

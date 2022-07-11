@@ -7,18 +7,8 @@
     </ClCompile>
     <ClCompile Include="FileSystemUtility.cpp" />
     <ClCompile Include="FileSystemUtility_WinPC.cpp" />
-    <ClCompile Include="FileSystemUtility_Android.cpp" />
     <ClCompile Include="FileSystemPathComponent.cpp" />
     <ClCompile Include="_Internal\_WinPCFileSystemPathComponent.cpp">
-      <Filter>_Internal</Filter>
-    </ClCompile>
-    <ClCompile Include="_Internal\_AndroidBundleFileResourceComponent.cpp">
-      <Filter>_Internal</Filter>
-    </ClCompile>
-    <ClCompile Include="_Internal\_AndroidFileSystemJNIInterface.cpp">
-      <Filter>_Internal</Filter>
-    </ClCompile>
-    <ClCompile Include="_Internal\_AndroidFileSystemPathComponent.cpp">
       <Filter>_Internal</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,16 +35,5 @@
     <ClInclude Include="_Internal\_WinPCFileSystemPathComponent.h">
       <Filter>_Internal</Filter>
     </ClInclude>
-    <ClInclude Include="_Internal\_AndroidBundleFileResourceComponent.h">
-      <Filter>_Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="_Internal\_AndroidFileSystemPathComponent.h">
-      <Filter>_Internal</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <JCompile Include="Java\com\leggiero\Engine\Modules\FileSystem\FileSystemHelper.java">
-      <Filter>Java\com.leggiero.Engine.Modules.FileSystem</Filter>
-    </JCompile>
   </ItemGroup>
 </Project>

@@ -34,6 +34,8 @@ namespace Leggiero
 	}
 }
 
+LEGGIERO_DECLARE_SINGLETON_MEMBERS(Leggiero::Font::FontModule);
+
 
 DECLARE_GET_MODULE_INTERFACE(Leggiero::Font::FontModule, Leggiero::EngineModuleIdType::kFont);
 

@@ -100,15 +100,15 @@ namespace Leggiero
 
 			public:
 				UIElementTextInputBox(std::shared_ptr<UIManager> ownerManager, UICoordinateType width, UICoordinateType height,
-					TypesettingGeneratorType typesettingGeneratorFunc, Graphics::GLByteARGB textMultiplyColor = Graphics::GLByteARGB::kWhite, const GameDataString &initialString = u8"",
-					const GameDataString &dialogTitle = u8"", const GameDataString &dialogMessage = u8"", const GameDataString &dialogAcceptButton = u8"OK", const GameDataString &dialogCancelButton = u8"Cancel",
+					TypesettingGeneratorType typesettingGeneratorFunc, Graphics::GLByteARGB textMultiplyColor = Graphics::GLByteARGB::kWhite, const GameDataString &initialString = (const char *)u8"",
+					const GameDataString &dialogTitle = (const char *)u8"", const GameDataString &dialogMessage = (const char *)u8"", const GameDataString &dialogAcceptButton = (const char *)u8"OK", const GameDataString &dialogCancelButton = (const char *)u8"Cancel",
 					EventHandlerType onTextInput = ms_dummyEventHandler, EventHandlerType onValidationFailed = ms_dummyEventHandler,
 					TextInputFilterType textInputFilter = ms_dummyFilter, TextInputValidatorType textInputValidator = ms_dummyValidator,
 					std::shared_ptr<RenderingController> renderingController = nullptr);
 				UIElementTextInputBox(std::shared_ptr<UIManager> ownerManager, UICoordinateType width, UICoordinateType height,
 					UICoordinateType clippingRectLeft, UICoordinateType clippingRectTop, UICoordinateType clippingRectWidth, UICoordinateType clippingRectHeight,
-					TypesettingGeneratorType typesettingGeneratorFunc, Graphics::GLByteARGB textMultiplyColor = Graphics::GLByteARGB::kWhite, const GameDataString &initialString = u8"",
-					const GameDataString &dialogTitle = u8"", const GameDataString &dialogMessage = u8"", const GameDataString &dialogAcceptButton = u8"OK", const GameDataString &dialogCancelButton = u8"Cancel",
+					TypesettingGeneratorType typesettingGeneratorFunc, Graphics::GLByteARGB textMultiplyColor = Graphics::GLByteARGB::kWhite, const GameDataString &initialString = (const char *)u8"",
+					const GameDataString &dialogTitle = (const char *)u8"", const GameDataString &dialogMessage = (const char *)u8"", const GameDataString &dialogAcceptButton = (const char *)u8"OK", const GameDataString &dialogCancelButton = (const char *)u8"Cancel",
 					EventHandlerType onTextInput = ms_dummyEventHandler, EventHandlerType onValidationFailed = ms_dummyEventHandler,
 					TextInputFilterType textInputFilter = ms_dummyFilter, TextInputValidatorType textInputValidator = ms_dummyValidator,
 					std::shared_ptr<RenderingController> renderingController = nullptr);
