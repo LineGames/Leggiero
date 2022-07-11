@@ -111,9 +111,9 @@ namespace Leggiero
 
 			SampleNumberType endSample = startSample + sampleCount;
 			size_t maxSampleCount = GetSampleLength();
-			if (endSample > maxSampleCount)
+			if (endSample > static_cast<SampleNumberType>(maxSampleCount))
 			{
-				endSample = maxSampleCount;
+				endSample = static_cast<SampleNumberType>(maxSampleCount);
 			}
 
 			if (startSample >= endSample)
