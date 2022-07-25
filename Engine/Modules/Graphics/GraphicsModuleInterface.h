@@ -41,6 +41,8 @@ namespace Leggiero
 	}
 }
 
+LEGGIERO_DECLARE_SINGLETON_MEMBERS(Leggiero::Graphics::GraphicsModule);
+
 
 DECLARE_GET_MODULE_INTERFACE(Leggiero::Graphics::GraphicsModule, Leggiero::EngineModuleIdType::kGraphics);
 

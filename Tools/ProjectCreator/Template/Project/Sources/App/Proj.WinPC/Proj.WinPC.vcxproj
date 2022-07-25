@@ -87,6 +87,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\pthreads4w\libs\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\PowerVR\libs\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\FreeType\libs\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenALSoft\libs\Win64\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\curl\lib;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\libjpeg-turbo\libs\Release\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\libogg\libs\Release\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\libvorbis\libs\Release\;$(ProjectDir)..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\lib\Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libEGL.lib;libGLESv2.lib;freetype.lib;OpenAL32.lib;libogg.lib;libvorbis_static.lib;libvorbisfile_static.lib;libcrypto.lib;libssl.lib;libcurl.dll.a;pthreadVCE3.lib;jpeg-static.lib;turbojpeg-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

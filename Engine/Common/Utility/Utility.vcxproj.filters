@@ -101,9 +101,6 @@
     <ClCompile Include="Threading\ManagedThreadPrimitives.cpp">
       <Filter>Threading</Filter>
     </ClCompile>
-    <ClCompile Include="Threading\ThreadSleep_Android.cpp">
-      <Filter>Threading</Filter>
-    </ClCompile>
     <ClCompile Include="Threading\ThreadSleep_WinPC.cpp">
       <Filter>Threading</Filter>
     </ClCompile>

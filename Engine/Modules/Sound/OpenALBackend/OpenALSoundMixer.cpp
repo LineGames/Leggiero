@@ -43,8 +43,8 @@ namespace Leggiero
 			//------------------------------------------------------------------------------
 			OpenALSoundMixer::OpenALSoundMixer()
 				: m_isOnceInitialized(false), m_appComponentCopy(nullptr)
-				, m_isSuspended(true), m_isShutdownRequested(false), m_isUpdateThreadExists(false), m_isCleanUpDone(false)
-				, m_lastSignalTimeInEpochMicroSec((long long)std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch()).count())
+				, m_isSuspended(true), m_suspendMutex(true, false), m_soundListMutex(true, false), m_isShutdownRequested(false), m_isUpdateThreadExists(false), m_cleanUpMutex(true, false), m_isCleanUpDone(false)
+				, m_updateLoopConsumeMutex(true, false), m_lastSignalTimeInEpochMicroSec((long long)std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch()).count())
 				, m_myPointerHolder(std::make_shared<Utility::Object::PointerHolder>(this))
 			{
 				

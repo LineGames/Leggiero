@@ -34,6 +34,8 @@ namespace Leggiero
 	}
 }
 
+LEGGIERO_DECLARE_SINGLETON_MEMBERS(Leggiero::Log::LogModule);
+
 
 DECLARE_GET_MODULE_INTERFACE(Leggiero::Log::LogModule, Leggiero::EngineModuleIdType::kLog);
 

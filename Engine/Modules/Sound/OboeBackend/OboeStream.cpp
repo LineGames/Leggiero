@@ -14,6 +14,9 @@
 #include <Utility/Math/SimpleMath.h>
 #include <Utility/Sugar/Finally.h>
 
+// Leggiero.Platform.Android
+#include <AndroidCommon.h>
+
 // Leggiero.Sound
 #include "../Provider/ISoundProvider.h"
 #include "OboeSoundMixer.h"
@@ -114,9 +117,10 @@ namespace Leggiero
 					return;
 				}
 
+				int platformAPILevel = Leggiero::Platform::Android::GetDeviceAndroidAPILevel();
+
 				oboe::AudioStreamBuilder builder;
 				builder.setSharingMode(oboe::SharingMode::Shared)
-					->setPerformanceMode(oboe::PerformanceMode::LowLatency)
 					->setUsage(oboe::Usage::Game)
 					->setChannelCount(2)
 					->setSampleRate(m_requestedSamplingRate)
@@ -124,6 +128,9 @@ namespace Leggiero
 					->setFormat(oboe::AudioFormat::I16)
 					->setDataCallback(this)
 					->setErrorCallback(this);
+				if (platformAPILevel >= 25) {
+					builder.setPerformanceMode(oboe::PerformanceMode::LowLatency);
+				}
 				oboe::Result res = builder.openStream(m_stream);
 				if (res != oboe::Result::OK)
 				{

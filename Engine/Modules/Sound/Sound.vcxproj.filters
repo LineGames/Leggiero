@@ -29,21 +29,6 @@
     <ClCompile Include="Provider\LoopHoldSoundProvider.cpp">
       <Filter>Provider</Filter>
     </ClCompile>
-    <ClCompile Include="OboeBackend\OboeCommon.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\OboeSoundPlayingContext.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\OboeLoopingSoundPlayingContext.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\OboeBufferedSoundPlayingContext.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\OboeSoundMixer.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
     <ClCompile Include="OpenALBackend\_Internal\_OpenALSourceReleasingContext.cpp">
       <Filter>Backend\OpenAL\_Internal</Filter>
     </ClCompile>
@@ -60,32 +45,8 @@
     <ClCompile Include="Platform\WinPCPlatformSound.cpp">
       <Filter>Platform\WinPC</Filter>
     </ClCompile>
-    <ClCompile Include="Platform\AndroidPlatformSound.cpp">
-      <Filter>Platform\Android</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\AndroidSoundJNIInterface.cpp">
-      <Filter>Platform\Android</Filter>
-    </ClCompile>
     <ClCompile Include="Platform\WinPCBGMPlayer.cpp">
       <Filter>Platform\WinPC</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\AndroidBGMJNIInterface.cpp">
-      <Filter>Platform\Android</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\AndroidBGMPlayer.cpp">
-      <Filter>Platform\Android</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\_AndroidBGMPlayingContext.cpp">
-      <Filter>Platform\Android</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\OboeStream.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\OboePlatformCompat.cpp">
-      <Filter>Backend\Oboe</Filter>
-    </ClCompile>
-    <ClCompile Include="OboeBackend\_OboeInternal.cpp">
-      <Filter>Backend\Oboe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,21 +87,6 @@
     <ClInclude Include="Provider\LoopHoldSoundProvider.h">
       <Filter>Provider</Filter>
     </ClInclude>
-    <ClInclude Include="OboeBackend\OboeCommon.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\OboeSoundPlayingContext.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\OboeLoopingSoundPlayingContext.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\OboeBufferedSoundPlayingContext.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\OboeSoundMixer.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
     <ClInclude Include="OpenALBackend\_Internal\_OpenALSourceReleasingContext.h">
       <Filter>Backend\OpenAL\_Internal</Filter>
     </ClInclude>
@@ -160,21 +106,6 @@
     <ClInclude Include="Platform\WinPCBGMPlayer.h">
       <Filter>Platform\WinPC</Filter>
     </ClInclude>
-    <ClInclude Include="Platform\AndroidBGMPlayer.h">
-      <Filter>Platform\Android</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform\_AndroidBGMPlayingContext.h">
-      <Filter>Platform\Android</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\OboeStream.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\_OboeInternal.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
-    <ClInclude Include="OboeBackend\IOboeStreamRendering.h">
-      <Filter>Backend\Oboe</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -192,34 +123,11 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{0813402b-ce1c-42f8-aaac-08f61b67c576}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Backend\Oboe">
-      <UniqueIdentifier>{1cb3c598-94aa-4e5c-9d6a-68719033003a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Java">
-      <UniqueIdentifier>{5aa17c0a-b571-492b-a81e-006679b8a63f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Java\com.leggiero.Engine.Modules.Sound">
-      <UniqueIdentifier>{514e8c89-9709-4979-8a21-f2a2920f0396}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Backend\OpenAL\_Internal">
       <UniqueIdentifier>{810ba682-3028-4e84-95d5-142858d90255}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\WinPC">
       <UniqueIdentifier>{fc3461d4-a615-4361-9a87-4f9241d534ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Platform\Android">
-      <UniqueIdentifier>{0f7134a2-1e4c-4622-82ad-465c1e671779}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <JCompile Include="Java\com\leggiero\Engine\Modules\Sound\SoundHelper.java">
-      <Filter>Java\com.leggiero.Engine.Modules.Sound</Filter>
-    </JCompile>
-    <JCompile Include="Java\com\leggiero\Engine\Modules\Sound\BGMHelper.java">
-      <Filter>Java\com.leggiero.Engine.Modules.Sound</Filter>
-    </JCompile>
-    <JCompile Include="Java\com\leggiero\Engine\Modules\Sound\BGMPlayingContext.java">
-      <Filter>Java\com.leggiero.Engine.Modules.Sound</Filter>
-    </JCompile>
   </ItemGroup>
 </Project>

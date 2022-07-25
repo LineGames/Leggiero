@@ -90,6 +90,8 @@ namespace Leggiero
 	}
 }
 
+LEGGIERO_DECLARE_SINGLETON_MEMBERS(Leggiero::ModuleSystem::DummyModuleInterface);
+
 
 // Template specialization for Engine Module Access Functions
 #define DECLARE_GET_MODULE_INTERFACE(CLASS_NAME, MODULE_ID) \
