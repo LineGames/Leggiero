@@ -37,13 +37,5 @@
     <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\curl\bin\libcurl-x64.dll">
       <Filter>Library</Filter>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Debug\libssl-1_1-x64.dll">
-      <Filter>Library</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Release\libssl-1_1-x64.dll">
-      <Filter>Library</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Debug\libcrypto-1_1-x64.dll" />
-    <CopyFileToFolders Include="..\..\..\..\Engine\Libraries\Dependent\Win-x64\OpenSSL\bin\Release\libcrypto-1_1-x64.dll" />
   </ItemGroup>
 </Project>

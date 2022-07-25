@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "ProjectCreatorGUI/1.0.0": {
-        "dependencies": {
-          "ProjectCreatorCore": "1.0.0"
-        },
-        "runtime": {
-          "ProjectCreatorGUI.dll": {}
-        }
-      },
       "ProjectCreatorCore/1.0.0": {
         "runtime": {
           "ProjectCreatorCore.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "ProjectCreatorGUI/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "ProjectCreatorCore/1.0.0": {
       "type": "project",
       "serviceable": false,
