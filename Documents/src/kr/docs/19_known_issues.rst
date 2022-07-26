@@ -4,10 +4,7 @@ Known Issues
 
 현재 Leggiero 엔진에는 아래와 같은, 알려졌으나 고쳐지지 않은 이슈들이 존재합니다:
 
-* iOS에서 MGLKView의 시작 tansition animation이 수정되지 않습니다. iOS 앱 시작 시, 원하는 형태의 자연스러운 애니메이션 연출이 어렵습니다.
-  
-  해당 문제에 대해서는 MetalANGLE 라이브러리의 GitHub 저장소에 issue를 생성해 문의한 상태입니다.
-  
+* iOS에서 앱을 시작할 때, 스플래시 스크린을 표시한 후 MGLKView를 시작하는 도중, 몇 프레임 정도 검은 화면이 표시될 수 있습니다.
 
 * Android에서 back button을 통해 앱을 종료하였다가 다시 기동시키면, 화면이 출력되지 않습니다.
   back button을 통해 home screen으로 나갈 경우 Activity는 파괴되나 프로세스는 종료되지 않아, 프로세스 내에서의 EGL 상태 내에 문제가 있는 것이 아닐까 추정하고 있습니다.

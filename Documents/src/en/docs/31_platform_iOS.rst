@@ -12,7 +12,7 @@ Supporting Details
   
 - For iOS version 12.3 and later.
   
-- Supports ARMv7 and ARM64 architectures.
+- Supports ARM64 architecture.
   
 
 

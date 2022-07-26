@@ -12,7 +12,7 @@ Supporting Details
   
 - iOS 12.3 이상의 버전을 지원
   
-- ARMv7 및 ARM64 아키텍처 지원
+- ARM64 아키텍처 지원
   
 
 

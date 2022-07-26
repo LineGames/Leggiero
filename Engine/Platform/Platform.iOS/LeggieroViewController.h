@@ -13,6 +13,10 @@
 
 // Our iOS view controller base class
 @interface LeggieroViewController : MGLKViewController
+{
+@protected
+    bool m_isLandscape;
+}
 
 @end
 

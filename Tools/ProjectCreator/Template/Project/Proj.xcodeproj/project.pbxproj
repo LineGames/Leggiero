@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16046CFC288F70B3004F8D7C /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16046CFB288F70B3004F8D7C /* libpng.a */; };
 		162C476825E7F31C00956A15 /* libLMSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F26A3725E6B75A00C1530C /* libLMSound.a */; };
 		162C479E25E7FDF200956A15 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 162C479C25E7FDDF00956A15 /* libogg.a */; };
 		162C479F25E7FDF200956A15 /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 162C479A25E7FDDF00956A15 /* libvorbis.a */; };
@@ -313,6 +314,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		16046CFB288F70B3004F8D7C /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = ../Engine/Libraries/Dependent/iOS/libpng/libs/libpng.a; sourceTree = "<group>"; };
 		162C479A25E7FDDF00956A15 /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = ../Engine/Libraries/Dependent/iOS/oggvorbis/libs/libvorbis.a; sourceTree = "<group>"; };
 		162C479B25E7FDDF00956A15 /* libvorbisenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbisenc.a; path = ../Engine/Libraries/Dependent/iOS/oggvorbis/libs/libvorbisenc.a; sourceTree = "<group>"; };
 		162C479C25E7FDDF00956A15 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = ../Engine/Libraries/Dependent/iOS/oggvorbis/libs/libogg.a; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				163048A025D2C2800062C67F /* libLeggieroLib.a in Frameworks */,
 				168F027225D77BC900D1B2CF /* UIKit.framework in Frameworks */,
 				168F027425D77BE200D1B2CF /* Foundation.framework in Frameworks */,
+				16046CFC288F70B3004F8D7C /* libpng.a in Frameworks */,
 				162C47A025E7FDF200956A15 /* libvorbisenc.a in Frameworks */,
 				16F26A2225E6B64300C1530C /* soft_oal.framework in Frameworks */,
 				162C479E25E7FDF200956A15 /* libogg.a in Frameworks */,
@@ -678,6 +681,7 @@
 				16F269AC25E6ACA300C1530C /* libfreetype.a */,
 				1630494F25D2C9460062C67F /* libjpeg.a */,
 				1630495025D2C9460062C67F /* libturbojpeg.a */,
+				16046CFB288F70B3004F8D7C /* libpng.a */,
 				1630480525D192910062C67F /* libz.tbd */,
 				163045E925D18AD00062C67F /* libpthread.tbd */,
 			);
@@ -1066,6 +1070,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -1116,11 +1121,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					../Engine/Libraries/LeggieroLib,
+					../Engine/Libraries/Dependent/iOS/zlib/include,
 					"../Engine/Libraries/Dependent/iOS/libjpeg-turbo/include",
 					../Engine/Libraries/Dependent/iOS/FreeType/include,
 					../Engine/Libraries/Dependent/iOS/oggvorbis/include,
 					../Engine/Libraries/Dependent/iOS/cryptopp/include,
 					../Engine/Libraries/Dependent/iOS/OpenSSL/include,
+					../Engine/Libraries/Dependent/iOS/libpng/include,
 					../Engine/Common,
 					../Engine/Platform/Platform.iOS,
 					../Engine/Modules,
@@ -1132,6 +1139,7 @@
 					../Engine/Libraries/Dependent/iOS/oggvorbis/libs,
 					../Engine/Libraries/Dependent/iOS/cryptopp/libs,
 					../Engine/Libraries/Dependent/iOS/OpenSSL/lib,
+					../Engine/Libraries/Dependent/iOS/libpng/libs,
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1144,6 +1152,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -1192,11 +1201,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					../Engine/Libraries/LeggieroLib,
+					../Engine/Libraries/Dependent/iOS/zlib/include,
 					"../Engine/Libraries/Dependent/iOS/libjpeg-turbo/include",
 					../Engine/Libraries/Dependent/iOS/FreeType/include,
 					../Engine/Libraries/Dependent/iOS/oggvorbis/include,
 					../Engine/Libraries/Dependent/iOS/cryptopp/include,
 					../Engine/Libraries/Dependent/iOS/OpenSSL/include,
+					../Engine/Libraries/Dependent/iOS/libpng/include,
 					../Engine/Common,
 					../Engine/Platform/Platform.iOS,
 					../Engine/Modules,
@@ -1208,6 +1219,7 @@
 					../Engine/Libraries/Dependent/iOS/oggvorbis/libs,
 					../Engine/Libraries/Dependent/iOS/cryptopp/libs,
 					../Engine/Libraries/Dependent/iOS/OpenSSL/lib,
+					../Engine/Libraries/Dependent/iOS/libpng/libs,
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

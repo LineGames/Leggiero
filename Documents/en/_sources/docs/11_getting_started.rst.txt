@@ -5,8 +5,6 @@ Getting Started
 This document is a getting started guide for game developlment with Leggiero engine.
 Before try the contents in this document, please set developlment environment as `Dependency <10_dependency.html>`_ document.
 
-.. Attention:: Opening the project solution in Visual Studio without Nsight Tegra, Visual Studio Edition can corrupt some project settings. We recommend to try following instructions after install all dependencies.
-
 
 Engine Setup
 ============
@@ -58,42 +56,19 @@ You can get source of LegToy project in the **Engine Root Directory** as:
   git clone https://github.com/LineGames/LegToy.git
   
 
-WinPC and Android App Build
----------------------------
-Android and Windows PC application of LegToy can be built using Visual Studio.
+WinPC Binary Build
+------------------
+Windows PC application of LegToy can be built using Visual Studio.
 
 - Open the solution file **LegToy.sln** in the *Project Folder of LegToy* .
   
 - Building Windows PC Binary
   
-  + Set **LegToy.WinPC** project as StartUp Project in Solution Explorer.
-    
-  + Set x64 for Active solution platform in Configuration Manager.
-    
-  + Now you can build WinPC binary of LegToy and can do runtime debugging. Binary is in *Binary* sub-directory of the project folder.
-    
+- Set **LegToy.WinPC** project as StartUp Project in Solution Explorer.
   
-- Building an Android App
+- Set x64 for Active solution platform in Configuration Manager.
   
-  + Set **LegToy.Android** project as StartUp Project in Solution Explorer.
-    
-  + Set **AArch64-Android-NVIDIA** for Active solution platform in Configuration Manager. We recommend to try build in Debug configuration first.
-    
-  + Build the entire solution using :guilabel:`Build` > :guilabel:`Build Solution` menu. Then you can get .so archive of the game application for ARM64 architecture.
-    
-  + Next, set **ARM-Android-NVIDIA** as Active solution platform.
-    
-  + Build the entire solution using :guilabel:`Build` > :guilabel:`Build Solution` menu. Game application\'s .so archive for 32-bit ARM architectures have been built.
-    
-  + Now, change Active solution platform to **Tegra-Android**.
-    
-  + Right click **LegToy.Android** project in Solution Explorer, and select :guilabel:`Project Only` > :guilabel:`Build Only LegToy.Android` menu to build a APK file.
-    
-    • APK will be created under Binary folder in the prolect directory.
-      
-    • Although it is annoying to build .so shared library and APK separately, it is for building Fat APK supporting 32-bit and 64-bit architecture both. Nsight Tegra, Visual Studio Edition doesn\'t handle dependency and build process properly.
-      
-    
+- Now you can build WinPC binary of LegToy and can do runtime debugging. Binary is in *Binary* sub-directory of the project folder.
   
 
 .. Hint:: Build can fails if engine and project directory is in a folder having long path. It is suspected that OS\'s path length limit(about 260 characters) cause the error. We recommend to put engine and project in a folder with swallow path.
@@ -108,6 +83,21 @@ iOS App Build
   + Sign and certificate settings may be needed for real devices. Set project setting for your Apple developer account before build.
     
   
+.. Note:: Building the app for iOS simulators is not supported.
+
+Android App Build
+-----------------
+
+- **Sources/App/LegToy.Android** folder under the *Project Folder of LegToy* is a project for Android Studio.
+  
+- Build the app with Android Studio or the other tools whatever you want.
+  
+.. Hint:: It may useful to set version of tools in Gradle setting.
+  
+  - *ext.ndkVersion* in project gradle file and *android.ndkVersion* in module gradle file
+  
+  - *android.externalNativeBuild.cmake.version* in module gradle file
+  
 
 
 Start with a NEW project
@@ -117,7 +107,7 @@ You can create a new project for Leggiero engine with Project Creator tool.
 
 Project Creator
 ---------------
-There are prebuilt tool binaries *(requires .NET 5.0 runtime)* in *Tools/ProjectCreator* directory in the engine repository.
+There are prebuilt tool binaries *(requires .NET 6.0 runtime)* in *Tools/ProjectCreator* directory in the engine repository.
 
 - **ProjectCreatorTool.exe** is a command line tool for project creation.
   
@@ -127,14 +117,7 @@ Create a Project
 ----------------
 You can set some properties for new project in Project Creator tool.
 
-The project directory of new project will be located in the **Engine Root** directory. You can build the new project using Visual Studio solution and XCode project in project directory.
+The project directory of new project will be located in the **Engine Root** directory. You can build the new project using Visual Studio solution, Android Studio project(**Source/App/*.Android**) and XCode project in project directory.
 
 .. Note:: Changing the relative path from the engine root directory and the project directory is NOT supported for now.
 
-
-Notes for Android Release Build
-===============================
-
-App Signning is needed to build and run Release APK or to distribute your app via stores.
-
-You can set a secure property file in project properties windows of LegToy.Android project for do signning in the build process. Set **Secure Properties Location** property under :guilabel:`Gradle Build` > :guilabel:`General` in Tegra-Android platform.

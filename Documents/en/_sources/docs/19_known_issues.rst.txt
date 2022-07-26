@@ -4,9 +4,7 @@ Known Issues
 
 There are some known, but not fixed, issues:
 
-* In iOS platform, view start tansition animation of MGLKView is not changeable. It makes animation direction at string of iOS app difficult.
-  
-  We open an issue for that in the GitHub repository of MetalANGLE library.
+* In iOS platform, screen is black-outed during a few frame after splash screen shown.
   
 
 * OpenGL ES output is now shown after re-launch of the app from termination by back button.

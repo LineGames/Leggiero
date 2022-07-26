@@ -9,7 +9,7 @@ Leggiero is released under MIT License.
 
 .. code-block:: none
     
-    Copyright 2021 (c) Kim, Young Soo and LINE GAMES Corporation.
+    Copyright 2021-2022 (c) Kim, Young Soo and LINE GAMES Corporation.
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
