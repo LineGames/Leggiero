@@ -225,6 +225,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					../../Libraries/LeggieroLib,
+					../../Libraries/Dependent/iOS/zlib/include,
 					"../../Libraries/Dependent/iOS/libjpeg-turbo/include",
 					../../Libraries/Dependent/iOS/FreeType/include,
 					../../Libraries/Dependent/iOS/oggvorbis/include,
@@ -295,6 +296,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					../../Libraries/LeggieroLib,
+					../../Libraries/Dependent/iOS/zlib/include,
 					"../../Libraries/Dependent/iOS/libjpeg-turbo/include",
 					../../Libraries/Dependent/iOS/FreeType/include,
 					../../Libraries/Dependent/iOS/oggvorbis/include,
