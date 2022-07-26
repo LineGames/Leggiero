@@ -11,7 +11,7 @@
 #include <cstdio>
 
 // External Library
-#include <zlib/zlib.h>
+#include <zlib.h>
 
 // Leggiero.Utility
 #include <Utility/Encoding/HexString.h>
