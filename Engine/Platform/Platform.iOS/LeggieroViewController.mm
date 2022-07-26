@@ -85,10 +85,19 @@
     // Process Screen Size
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
-    Leggiero::Platform::iOS::pApplication->SetScreenSize(screenSize.width * m_scale, screenSize.height * m_scale, true);
+    
+    CGSize effectiveSize = screenSize;
+    if ((m_isLandscape && (screenSize.width < screenSize.height))
+        || (!m_isLandscape && (screenSize.width > screenSize.height)))
+    {
+        effectiveSize.width = screenSize.height;
+        effectiveSize.height = screenSize.width;
+    }
+    
+    Leggiero::Platform::iOS::pApplication->SetScreenSize(effectiveSize.width * m_scale, effectiveSize.height * m_scale, true);
     
     // Process PPI
-    float screenPPI = Leggiero::Platform::iOS::CalculatePPI(screenSize.width * m_scale, screenSize.height * m_scale);
+    float screenPPI = Leggiero::Platform::iOS::CalculatePPI(effectiveSize.width * m_scale, effectiveSize.height * m_scale);
     Leggiero::Platform::iOS::pApplication->SetApproximateScreenPPI(screenPPI, screenPPI);
     
     // Process Application Metadata
