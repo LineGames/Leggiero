@@ -23,6 +23,9 @@
     float   m_scale;
     bool    m_isInsetSet;
     bool    m_isGraphicInitialized;
+    
+    bool    m_isFirstFrame;
+    id      m_beforeFirstShowingView;
 }
 
 
@@ -35,6 +38,7 @@
     {
         m_isInsetSet = false;
         m_isGraphicInitialized = false;
+        m_beforeFirstShowingView = nil;
     }
     return self;
 }
@@ -43,7 +47,17 @@
 {
     [super viewDidLoad];
     
+    m_isFirstFrame = true;
+    
     [self initializeScreenGL];
+    
+    m_beforeFirstShowingView = [self getInitialShowingUIView];
+    if (m_beforeFirstShowingView != nil)
+    {
+        UIView *showingView = m_beforeFirstShowingView;
+        [self setInitialShowingViewTo:self.view target:showingView];
+    }
+    
     [self initializeGameApplication];
 }
 
@@ -148,6 +162,30 @@
 }
 
 
+#pragma mark - Before First Frame Showing
+
+- (id)getInitialShowingUIView
+{
+    return nil;
+}
+
+- (void)setInitialShowingViewTo:(UIView *)parentView
+                         target:(UIView *)target
+{
+    target.translatesAutoresizingMaskIntoConstraints = NO;
+    [parentView addSubview:target];
+    
+    [target.leadingAnchor constraintEqualToAnchor:parentView.leadingAnchor].active = YES;
+    [target.trailingAnchor constraintEqualToAnchor:parentView.trailingAnchor].active = YES;
+    [target.topAnchor constraintEqualToAnchor:parentView.topAnchor].active = YES;
+    [target.bottomAnchor constraintEqualToAnchor:parentView.bottomAnchor].active = YES;
+}
+
+- (void)handleFirstFrameConfirmed
+{
+}
+
+
 #pragma mark - Event Handlings
 
 - (void)mglkView:(MGLKView *)view drawInRect:(CGRect)rect
@@ -163,7 +201,18 @@
             m_isGraphicInitialized = true;
         }
         
+        if (!m_isFirstFrame)
+        {
+            if (m_beforeFirstShowingView != nil)
+            {
+                [m_beforeFirstShowingView removeFromSuperview];
+                m_beforeFirstShowingView = nil;
+                [self handleFirstFrameConfirmed];
+            }
+        }
+        
         pApp->DrawFrame();
+        m_isFirstFrame = false;
     }
 }
 
