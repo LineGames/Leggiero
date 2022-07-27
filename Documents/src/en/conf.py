@@ -6,7 +6,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'Leggiero'
-copyright = '2021, Kim, Young Soo'
+copyright = '2022, Kim, Young Soo'
 author = 'Kim, Young Soo'
 
 

@@ -9,7 +9,7 @@ Leggiero 엔진은 MIT 라이선스 하에서 제공됩니다.
 
 .. code-block:: none
     
-    Copyright 2021 (c) Kim, Young Soo and LINE GAMES Corporation.
+    Copyright 2021-2022 (c) Kim, Young Soo and LINE GAMES Corporation.
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal

@@ -7,26 +7,27 @@ Overview
 
 Leggiero is mainly developed in C++, and uses following development environments and SDKs for convenience programming:
 
-- Uses Microsoft `Visual Studio <https://visualstudio.microsoft.com/>`_ for **Windows PC** and **Android** platform targeted development.
+- Uses Microsoft `Visual Studio <https://visualstudio.microsoft.com/>`_ for **Windows PC** development platform targeted development.
   
   + Windows 10 OS is assumed for following development environment settings.
-    
-  + For Android platform, `NVIDIA® Nsight™ Tegra®, Visual Studio Edition <https://developer.nvidia.com/nvidia-nsight-tegra>`_ is used for developing and building, and also requires Android SDK and NDK.
-    
   
+
 - `XCode <https://developer.apple.com/xcode/>`_ is needed for **iOS** application building.
+
+- Android SDK and NDK are needed for **Android** application building, and Gradle and CMake are used to build the application.
   
+  + Use of `Android Studio <https://developer.android.com/studio>`_ is recommended.
 
 
 Visual Studio
 =============
 
-Leggiero uses Visual Studio 2019 for Windows PC development platform and Android target platform in developing and building.
+Leggiero uses Visual Studio 2022 for Windows PC development platform in developing and building.
 
-  Community edition can be used. The build process worked normally in version 16.9.3 at the time this document having written.
+  Community edition can be used. The build process worked normally in version 17.2.6 at the time this document having written.
   Lower versions may be used to build Leggiero, but there is no guarantee.
 
-If you are an individual developer meet some conditions, Visual Studio Community 2019 is available for free at the following page:
+If you are an individual developer meet some conditions, Visual Studio Community 2022 is available for free at the following page:
 
   `https://visualstudio.microsoft.com/ <https://visualstudio.microsoft.com/>`_
 
@@ -59,8 +60,6 @@ Android SDK is needed to build Android application.
 
 Install Android SDK with `Android Studio <https://developer.android.com/studio>`_ or other options.
 
-.. Attention:: SDK of API Level 28 should be installed because it is the most recent version supported by Nsight Tegra, Visual Studio Edition 3.6.
-
 After install Android SDK, setting for following environment variables is needed:
 
   - **ANDROID_HOME**
@@ -80,7 +79,7 @@ Android NDK is needed to build Leggiero's native C++ engine/game code.
 
 Download Android NDK, **Revision r18b** from `NDK Revision History <https://developer.android.com/ndk/downloads/revision_history>`_ page, and unzip to any path where you want.
 
-.. Attention:: We have to use Revision r18b due to Nsight Tegra, Visual Studio Edition 3.6's supporing version limitation.
+.. Note:: We used NDK r25 to develop Leggiero.
 
 And following environment variables setting is needed:
 
@@ -95,43 +94,17 @@ And following environment variables setting is needed:
       
     
 
-Ant & Gradle
-------------
+Gradle
+------
 Gradle is needed for Android application building.
 
-On the other hand, Apache Ant is also needed because Nsight Tegra, Visual Studio Edition usually requires Ant even we set Gradle as a build tool.
+We set Gradle Wrapper for Android project for Gradle 7.5.
 
-Download Gradle binary of **v4.10.X** in `Gradle Releases <https://gradle.org/releases/>`_ page and unzip it into where you want. And download binary version of Ant of **version 1.9.X** from `Apache Ant Download Page <https://ant.apache.org/bindownload.cgi>`_ unzip it too.
-
-.. Attention:: Nsight Tegra, Visual Studio Edition 3.6 supprot Gradle up to 4 series versions. It cannot recognize Ant's version over 1.10, so we should use Ant of 1.9.X version.
-
-Following environment variables setting is needed:
-
-  - **GRADLE_HOME**
-    
-    + Set *GRADLE_HOME* as Gradle location.
-      
-    
-  - **ANT_HOME**
-    
-    + Set *ANT_HOME* as Ant location.
-      
-    
-  - **Path**
-    
-    + Add *bin* sub-directories of Gradle and Ant into *Path* environment variable.
-      
-    
-
-Nsight Tegra, Visual Studio Edition
+CMake
 -----------------------------------
-Please install `NVIDIA® Nsight™ Tegra®, Visual Studio Edition <https://developer.nvidia.com/nvidia-nsight-tegra>`_ . The most recent version is 3.6 at the time of this article written.
+`CMake <https://cmake.org/>`_ is needed to build  Android native C++ codes.
 
-.. Note:: Please install the Visual Studio Extension for VS 2019.
-
-After the installation, launch Visual Studio and open :guilabel:`Extensions` > :guilabel:`Tegra` > :guilabel:`Options...` menu. Select **Android Tools Locations** under **Nsight Tegra** , and check and fill correct locations for build tools.
-
-.. Attention:: Some values are automatically filled using environment variables. But some settings, especially JDK location, could be filled with incorrect values. Please check and set to correct locations.
+.. Note:: We tested CMake 3.23.2 for the engine.
 
 
 iOS
