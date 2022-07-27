@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Element/UIElementBlurredBarrier.cpp (Leggiero/Modules - LegacyUI)
 //
 // UI Blurred Barrier Implementation
@@ -304,7 +304,11 @@ namespace Leggiero
 						xPatch = fillCount;
 
 						char *rowBuffer = (char *)malloc((size_t)((pixelHeight) * 4)); // 4 due to GL_PACK_ALIGNMENT
-						glReadPixels(startX + pixelWidth - 1, startY, 1, pixelHeight, GL_RGB, GL_UNSIGNED_BYTE, rowBuffer);
+#ifdef _LEGGIERO_IOS
+                        glReadPixels(startX + pixelWidth - 1, startY, 1, pixelHeight, GL_RGBA, GL_UNSIGNED_BYTE, rowBuffer);
+#else
+                        glReadPixels(startX + pixelWidth - 1, startY, 1, pixelHeight, GL_RGB, GL_UNSIGNED_BYTE, rowBuffer);
+#endif
 						size_t lineSize = xPatch * 3;
 						if (lineSize % 4 > 0)
 						{
@@ -333,9 +337,16 @@ namespace Leggiero
 							fillCount = (GLsizei)UIElementBlurredBarrierConstants::kBlurMarginWidth;
 						}
 						yPatch = fillCount;
-
-						char *rowBuffer = (char *)malloc((size_t)((pixelWidth + 1) * 3));
-						glReadPixels(startX, startY + pixelHeight - 1, pixelWidth, 1, GL_RGB, GL_UNSIGNED_BYTE, rowBuffer);
+                        
+#ifdef _LEGGIERO_IOS
+                        constexpr int kPixelSize = 4;
+                        char *rowBuffer = (char *)malloc((size_t)((pixelWidth + 1) * kPixelSize));
+                        glReadPixels(startX, startY + pixelHeight - 1, pixelWidth, 1, GL_RGBA, GL_UNSIGNED_BYTE, rowBuffer);
+#else
+                        constexpr int kPixelSize = 3;
+                        char *rowBuffer = (char *)malloc((size_t)((pixelWidth + 1) * kPixelSize));
+                        glReadPixels(startX, startY + pixelHeight - 1, pixelWidth, 1, GL_RGB, GL_UNSIGNED_BYTE, rowBuffer);
+#endif
 						size_t fillRowWidth = pixelWidth + xPatch;
 						size_t lineSize = fillRowWidth * 3;
 						if (lineSize % 4 > 0)
@@ -347,18 +358,18 @@ namespace Leggiero
 						{
 							for (GLsizei j = 0; j < fillCount; ++j)
 							{
-								*(uploadBuffer + j * lineSize + i * 3) = rowBuffer[i * 3];
-								*(uploadBuffer + j * lineSize + i * 3 + 1) = rowBuffer[i * 3 + 1];
-								*(uploadBuffer + j * lineSize + i * 3 + 2) = rowBuffer[i * 3 + 2];
+								*(uploadBuffer + j * lineSize + i * 3) = rowBuffer[i * kPixelSize];
+								*(uploadBuffer + j * lineSize + i * 3 + 1) = rowBuffer[i * kPixelSize + 1];
+								*(uploadBuffer + j * lineSize + i * 3 + 2) = rowBuffer[i * kPixelSize + 2];
 							}
 						}
 						for (GLsizei i = 0; i < xPatch; ++i)
 						{
 							for (GLsizei j = 0; j < fillCount; ++j)
 							{
-								*(uploadBuffer + j * lineSize + (pixelWidth + i) * 3) = rowBuffer[(pixelWidth - 1) * 3];
-								*(uploadBuffer + j * lineSize + (pixelWidth + i) * 3 + 1) = rowBuffer[(pixelWidth - 1) * 3 + 1];
-								*(uploadBuffer + j * lineSize + (pixelWidth + i) * 3 + 2) = rowBuffer[(pixelWidth - 1) * 3 + 2];
+								*(uploadBuffer + j * lineSize + (pixelWidth + i) * 3) = rowBuffer[(pixelWidth - 1) * kPixelSize];
+								*(uploadBuffer + j * lineSize + (pixelWidth + i) * 3 + 1) = rowBuffer[(pixelWidth - 1) * kPixelSize + 1];
+								*(uploadBuffer + j * lineSize + (pixelWidth + i) * 3 + 2) = rowBuffer[(pixelWidth - 1) * kPixelSize + 2];
 							}
 						}
 						m_texture->UploadSubImage((GLint)0, (GLint)pixelHeight, uploadBuffer, (GLsizei)fillRowWidth, fillCount);
