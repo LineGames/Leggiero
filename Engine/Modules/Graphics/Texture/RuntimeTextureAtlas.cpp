@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Texture/RuntimeTextureAtlas.cpp (Leggiero/Modules - Graphics)
 //
 // Implementation of Runtime Texture Atlas
@@ -277,7 +277,11 @@ namespace Leggiero
 			const TextureRectSection &allocatedSection = allocatedSpace->GetTextureSection();
 			glBindTexture(GL_TEXTURE_2D, m_texture->GetTextureInfo().name);
 			glTexSubImage2D(GL_TEXTURE_2D, m_texture->GetMipmapLevel(), allocatedSection.GetPixelLeft(), allocatedSection.GetPixelTop(), width, height, format, dataType, imageData);
-			glFinish();
+            #ifdef _LEGGIERO_IOS
+                glFlush();
+            #else
+                glFinish();
+            #endif
 			return allocatedSpace;
 		}
 

@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Texture/TextureHelper_Loader.cpp (Leggiero/Modules - Graphics)
 //
 // Loader part of Texture Helper Implementations
@@ -134,7 +134,11 @@ namespace Leggiero
 							{
 								return GLESRawTextureInformation::kINVALID;
 							}
-							glFinish();
+                            #ifdef _LEGGIERO_IOS
+                                glFlush();
+                            #else
+                                glFinish();
+                            #endif
 						}
 						else
 						{
@@ -175,7 +179,11 @@ namespace Leggiero
 						return GLESRawTextureInformation::kINVALID;
 					}
 
-					glFinish();
+                    #ifdef _LEGGIERO_IOS
+                        glFlush();
+                    #else
+                        glFinish();
+                    #endif
 
 					GLESRawTextureInformation resultTextureInfo;
 					resultTextureInfo.name = textureName;

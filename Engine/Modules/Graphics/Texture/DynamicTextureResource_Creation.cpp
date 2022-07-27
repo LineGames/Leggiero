@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Texture/DynamicTextureResource_Creation.cpp (Leggiero/Modules - Graphics)
 //
 // Implementation of Creation Functions of Dynamic Texture Resource
@@ -75,7 +75,11 @@ namespace Leggiero
 			if (creatingData == nullptr && imageData != nullptr)
 			{
 				glTexSubImage2D(GL_TEXTURE_2D, mipmapLevel, 0, 0, imageWidth, imageHeight, format, dataType, imageData);
-				glFinish();
+                #ifdef _LEGGIERO_IOS
+                    glFlush();
+                #else
+                    glFinish();
+                #endif
 			}
 
 			return std::shared_ptr<DynamicTextureResource>(new DynamicTextureResource(ownerManager,
