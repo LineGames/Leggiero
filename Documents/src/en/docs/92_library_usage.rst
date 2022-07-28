@@ -13,13 +13,13 @@ Leggiero uses following libraries:
 - `libb64 <http://libb64.sourceforge.net/>`_ 1.2 on Public Domain
 - `Crypto++ <https://www.cryptopp.com/>`_ 8.5.0 under Boost Software License 1.0 and other attached licenses in the repository
 - `curl <https://curl.se/>`_ 7.84.0 under MIT/X like license copied into the repository
-- `{fmt} <https://fmt.dev/>`_ 7.1.3 under a MIT-like permissive license copied into the repository
+- `{fmt} <https://fmt.dev/>`_ 9.0.0 under a MIT-like permissive license copied into the repository
 - `FreeType <https://www.freetype.org/>`_ 2.12.1 under FreeType License (Windows binary from `https://github.com/ubawurinna/freetype-windows-binaries <https://github.com/ubawurinna/freetype-windows-binaries>`_ )
 - `libjpeg-turbo <https://libjpeg-turbo.org/>`_ 2.1.3 under zlib License
 - `minimp3 <https://github.com/lieff/minimp3>`_ under CC0-1.0 License
 - `MetalANGLE <https://github.com/kakashidinho/metalangle>`_ GLES3 0.0.8 under BSD 3-Clause License
 - `OpenAL soft <https://github.com/kcat/openal-soft>`_ 1.22.2 under LGPLv2 license via dynamic linking
-- `oboe <https://github.com/google/oboe>`_ 1.6.1 with modification of issue https://github.com/google/oboe/issues/1148 under Apache 2.0 License
+- `oboe <https://github.com/google/oboe>`_ 1.6.1 under Apache 2.0 License
 - `Ogg <https://www.xiph.org/ogg/>`_ 1.3.5 under BSD License
 - `Vorbis <https://xiph.org/vorbis/>`_ 1.3.7 under BSD License
 - `OpenGL Mathematics (GLM) <https://glm.g-truc.net/>`_ 0.9.9.8 under MIT License
@@ -29,7 +29,7 @@ Leggiero uses following libraries:
 - `POSIX Threads for Windows <https://sourceforge.net/projects/pthreads4w/>`_ 3.0.0 under Apache License - Version 2.0
 - `TinyXML-2 <https://github.com/leethomason/tinyxml2>`_ 9.0.0 under zlib License
 - `UTF8-CPP <https://github.com/nemtrif/utfcpp>`_ 3.2.1 under Boost Software License - Version 1.0
-- `zlib <https://zlib.net/>`_ 1.2.11 under zlib License
+- `zlib <https://zlib.net/>`_ 1.2.11 and 1.2.12 under zlib License
 - Redist binary of `OpenAL <http://www.openal.org/>`_ 1.1 under the license attached in the repository
 - Parts of The Android Open Source Project under Apache License, Version 2.0
 

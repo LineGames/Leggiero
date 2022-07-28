@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Texture/TextureCommitter.cpp (Leggiero/Modules - Graphics)
 //
 // Implementation of Texture Committer
@@ -180,7 +180,11 @@ namespace Leggiero
 						glDisableVertexAttribArray(m_textureCommitShaderPositionSlot);
 						glDisableVertexAttribArray(m_textureCommitShaderTextureUVSlot);
 
-						glFinish();
+                        #ifdef _LEGGIERO_IOS
+                            glFlush();
+                        #else
+                            glFinish();
+                        #endif
 					}
 				}
 			}

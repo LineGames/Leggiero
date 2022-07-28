@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Texture/DynamicTextureResource.cpp (Leggiero/Modules - Graphics)
 //
 // Implementation of Dynamic Texture Resource
@@ -126,7 +126,11 @@ namespace Leggiero
 			if (creatingData == nullptr && imageData != nullptr)
 			{
 				glTexSubImage2D(GL_TEXTURE_2D, m_mipmapLevel, 0, 0, imageWidth, imageHeight, m_format, m_dataType, imageData);
-				glFinish();
+                #ifdef _LEGGIERO_IOS
+                    glFlush();
+                #else
+                    glFinish();
+                #endif
 			}
 
 			m_isInvalidated = false;
@@ -153,7 +157,11 @@ namespace Leggiero
 
 			glBindTexture(GL_TEXTURE_2D, m_textureInfo.name);
 			glTexSubImage2D(GL_TEXTURE_2D, m_mipmapLevel, x, y, imageWidth, imageHeight, m_format, m_dataType, imageData);
-			glFinish();
+            #ifdef _LEGGIERO_IOS
+                glFlush();
+            #else
+                glFinish();
+            #endif
 		}
 
 		//------------------------------------------------------------------------------

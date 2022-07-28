@@ -18,6 +18,11 @@
     bool m_isLandscape;
 }
 
+// Override point for initial showing before first frame
+- (id)getInitialShowingUIView;
+- (void)setInitialShowingViewTo:(UIView *)parentView target:(UIView *)target;
+- (void)handleFirstFrameConfirmed;
+
 @end
 
 #endif

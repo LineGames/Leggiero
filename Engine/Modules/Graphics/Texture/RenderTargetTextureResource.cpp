@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Texture/RenderTargetTextureResource.cpp (Leggiero/Modules - Graphics)
 //
 // Implementation of Render Target Texture Resource
@@ -138,7 +138,11 @@ namespace Leggiero
 			if (creatingData == nullptr && imageData != nullptr)
 			{
 				glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, imageWidth, imageHeight, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
-				glFinish();
+                #ifdef _LEGGIERO_IOS
+                    glFlush();
+                #else
+                    glFinish();
+                #endif
 			}
 
 			GLint prevBinded;
