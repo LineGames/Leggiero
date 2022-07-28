@@ -60,7 +60,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v0-10-0-2022-07-27-current">v0.10.0 (2022-07-27, current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-10-1-2022-07-28-current">v0.10.1 (2022-07-28, current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-10-0-2022-07-27">v0.10.0 (2022-07-27)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#v0-9-0">v0.9.0</a></li>
 </ul>
 </li>
@@ -84,6 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#supporting-details">Supporting Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#development-environment">Development Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#libraries">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="32_platform_Android.html">Android Platform</a><ul>
@@ -217,8 +219,20 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="이 제목에 대한 퍼머링크"></a></h1>
-<section id="v0-10-0-2022-07-27-current">
-<h2>v0.10.0 (2022-07-27, current)<a class="headerlink" href="#v0-10-0-2022-07-27-current" title="이 제목에 대한 퍼머링크"></a></h2>
+<section id="v0-10-1-2022-07-28-current">
+<h2>v0.10.1 (2022-07-28, current)<a class="headerlink" href="#v0-10-1-2022-07-28-current" title="이 제목에 대한 퍼머링크"></a></h2>
+<ul class="simple">
+<li><p>iOS 플랫폼에서 MetalANGLE을 사용하며 발생할 수 있는 몇 가지 문제를 수정하였습니다.</p>
+<ul>
+<li><p><strong>glFinish()</strong> 를 호출하는 과정에서 OpenGL의 ANGLE 구현 내에서 MTLCommandBuffer의 완료를 무한히 대기하고, 이어서 lock의 문제로 전체 그래픽 시스템이 정지하는 문제를, <strong>glFlush()</strong> 만 수행하도록 하여 회피하였습니다.</p></li>
+<li><p>앱 시작 시 검은 화면이 표시되는 상황에서 사용자가 지정한 <em>UIView</em> 를 표시할 수 있도록 인터페이스를 제공하여, 조금 더 원하는 연출을 수행하기 용이할 수 있도록 하였습니다.</p></li>
+</ul>
+</li>
+<li><p>Android 플랫폼을 위한 Gradle 빌드 스크립트를 수정하여, 현재 바이너리 폴더(프로젝트 폴더 내 <strong>Binary/Android</strong>)에 생성되는 APK 파일을 clean 과정에서 정리하도록 하였습니다.</p></li>
+</ul>
+</section>
+<section id="v0-10-0-2022-07-27">
+<h2>v0.10.0 (2022-07-27)<a class="headerlink" href="#v0-10-0-2022-07-27" title="이 제목에 대한 퍼머링크"></a></h2>
 <ul class="simple">
 <li><p>Android 빌드 시스템을 Gradle과 CMake 기반으로 이전하였고, Android Studio와 호환되도록 구성하였습니다.</p></li>
 <li><p>WinPC 플랫폼 및 Project Creator 툴에서 사용하는 Visual Studio의 버전을 2022로 업그레이드 하였습니다.</p></li>

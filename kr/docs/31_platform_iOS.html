@@ -60,7 +60,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="18_changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-10-0-2022-07-27-current">v0.10.0 (2022-07-27, current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-10-1-2022-07-28-current">v0.10.1 (2022-07-28, current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-10-0-2022-07-27">v0.10.0 (2022-07-27)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-9-0">v0.9.0</a></li>
 </ul>
 </li>
@@ -84,6 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#supporting-details">Supporting Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#development-environment">Development Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#libraries">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="32_platform_Android.html">Android Platform</a><ul>
@@ -240,6 +242,16 @@
 <li><p>OpenAL 지원을 위해 호환 라이브러리인 <a class="reference external" href="https://openal-soft.org/">OpenAL Soft</a> 라이브러리 사용</p>
 <ul>
 <li><p>Framework의 형태로 embed 하여, 동적으로 연결하여 사용</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="이 제목에 대한 퍼머링크"></a></h2>
+<ul class="simple">
+<li><p>앱을 시작할 때, 스플래시 스크린을 표시한 후 MGLKView를 시작하는 도중, 첫 프레임이 온전히 랜더링 되기 전 검은 화면이 잠시 표시될 수 있습니다.</p>
+<ul>
+<li><p>심리스한 연출을 원하시면, <em>LeggieroViewController</em> 클래스의 <strong>getInitialShowingUIView</strong> 메서드를 오버라이드 해서 검은 화면 대신 표시될 UIView를 지정할 수 있습니다.</p></li>
 </ul>
 </li>
 </ul>

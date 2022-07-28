@@ -59,8 +59,9 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v0-10-0-2022-07-27-current">v0.10.0 (2022-07-27, current)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v0-9-0-current">v0.9.0 (current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-10-1-2022-07-28-current">v0.10.1 (2022-07-28, current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-10-0-2022-07-27">v0.10.0 (2022-07-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-9-0">v0.9.0</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="19_known_issues.html">Known Issues</a></li>
@@ -81,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#supporting-details">Supporting Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#development-environment">Development Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#libraries">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="32_platform_Android.html">Android Platform</a><ul>
@@ -147,8 +149,20 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading"></a></h1>
-<section id="v0-10-0-2022-07-27-current">
-<h2>v0.10.0 (2022-07-27, current)<a class="headerlink" href="#v0-10-0-2022-07-27-current" title="Permalink to this heading"></a></h2>
+<section id="v0-10-1-2022-07-28-current">
+<h2>v0.10.1 (2022-07-28, current)<a class="headerlink" href="#v0-10-1-2022-07-28-current" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fixed some issues in iOS platform due to usage of MetalANGLE library.</p>
+<ul>
+<li><p>Changed some <strong>glFinish()</strong> calls to <strong>glFlush()</strong> to avoid graphic system stuck issue due to infinity waiting for MTLCommandBuffer finish.</p></li>
+<li><p>Provide interfaces for custom <em>UIView</em> to show during screen black-outed time just after launch screen and before.</p></li>
+</ul>
+</li>
+<li><p>Modify Gralde build script for Android platform to appropriately clean built APKs.</p></li>
+</ul>
+</section>
+<section id="v0-10-0-2022-07-27">
+<h2>v0.10.0 (2022-07-27)<a class="headerlink" href="#v0-10-0-2022-07-27" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>We migrated Androud build system to Gradle and CMake based, and also made compatible with Android Studio.</p></li>
 <li><p>We upgraded the version of Visual Studio for WinPC development platform and Project Creator tool.</p></li>
@@ -179,8 +193,8 @@
 </li>
 </ul>
 </section>
-<section id="v0-9-0-current">
-<h2>v0.9.0 (current)<a class="headerlink" href="#v0-9-0-current" title="Permalink to this heading"></a></h2>
+<section id="v0-9-0">
+<h2>v0.9.0<a class="headerlink" href="#v0-9-0" title="Permalink to this heading"></a></h2>
 <p>Initial release.</p>
 </section>
 </section>
