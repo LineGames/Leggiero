@@ -59,8 +59,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="18_changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-10-0-2022-07-27-current">v0.10.0 (2022-07-27, current)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-9-0-current">v0.9.0 (current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-10-1-2022-07-28-current">v0.10.1 (2022-07-28, current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-10-0-2022-07-27">v0.10.0 (2022-07-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_changelog.html#v0-9-0">v0.9.0</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Known Issues</a></li>
@@ -81,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#supporting-details">Supporting Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#development-environment">Development Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#libraries">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="31_platform_iOS.html#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="32_platform_Android.html">Android Platform</a><ul>
@@ -149,7 +151,6 @@
 <h1>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this heading"></a></h1>
 <p>There are some known, but not fixed, issues:</p>
 <ul>
-<li><p>In iOS platform, screen is black-outed during a few frame after splash screen shown.</p></li>
 <li><p>OpenGL ES output is now shown after re-launch of the app from termination by back button.
 EGL's internal state problem is a suspected cause, because exit by back button destory no the process but the Activity.</p>
 <p>We tried some solution but could not fix. So we changed default behavior of back button to preventing propagation.

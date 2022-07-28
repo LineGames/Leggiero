@@ -35,3 +35,13 @@ Libraries
   + Dynamically linked as an embeded framework.
     
   
+
+
+Notes
+=====
+
+In iOS platform, screen is black-outed during a few frame after splash screen shown and before MGLKView is rendered.
+  
+  + For seamless presentation, you can override **getInitialShowingUIView** method in *LeggieroViewController* class to set custom UIView to show.
+    
+  

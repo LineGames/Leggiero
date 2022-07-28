@@ -4,9 +4,6 @@ Known Issues
 
 There are some known, but not fixed, issues:
 
-* In iOS platform, screen is black-outed during a few frame after splash screen shown.
-  
-
 * OpenGL ES output is now shown after re-launch of the app from termination by back button.
   EGL\'s internal state problem is a suspected cause, because exit by back button destory no the process but the Activity.
   

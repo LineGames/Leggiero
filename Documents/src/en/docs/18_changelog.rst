@@ -3,8 +3,22 @@ Changelog
 =========
 
 
-v0.10.0 (2022-07-27, current)
+v0.10.1 (2022-07-28, current)
 =============================
+
+- Fixed some issues in iOS platform due to usage of MetalANGLE library.
+  
+  + Changed some **glFinish()** calls to **glFlush()** to avoid graphic system stuck issue due to infinity waiting for MTLCommandBuffer finish.
+  
+  + Provide interfaces for custom *UIView* to show during screen black-outed time just after launch screen and before.
+  
+
+- Modify Gralde build script for Android platform to appropriately clean built APKs.
+  
+
+
+v0.10.0 (2022-07-27)
+====================
 
 - We migrated Androud build system to Gradle and CMake based, and also made compatible with Android Studio.
 
@@ -41,7 +55,7 @@ v0.10.0 (2022-07-27, current)
   
 
 
-v0.9.0 (current)
-================
+v0.9.0
+======
 
 Initial release.
